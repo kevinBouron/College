@@ -12,7 +12,7 @@ public class Personne {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idPersonne;
+	protected int idPersonne;
 	protected String nom;
 	protected String prenom;
 	protected String mail;
@@ -35,11 +35,12 @@ public class Personne {
 	public String toString() {
 		return "Personne [nom=" + nom + ", prenom=" + prenom + ", mail=" + mail + ", tel=" + tel + "]";
 	}
-	public int getId() {
+	
+	public int getIdPersonne() {
 		return idPersonne;
 	}
-	public void setId(int id) {
-		this.idPersonne = id;
+	public void setIdPersonne(int idPersonne) {
+		this.idPersonne = idPersonne;
 	}
 	public String getNom() {
 		return nom;
