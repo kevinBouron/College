@@ -12,7 +12,7 @@
 <body>
 
 <h2> Assigner un enseignant responsable à un département</h2>
-<form:form modelAttribute="college" action="/">
+<form:form modelAttribute="departement" action="/">
 
 College: <form:select path="College.idCollege" items="${colleges}" itemValue="idCollege" itemLabel="siteInternet"></form:select> <br>
 Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="nom; prenom; mail; tel"></form:select>

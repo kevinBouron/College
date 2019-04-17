@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form:form modelAttribute="Enseignant" action="/collegeWeb/">
+<form:form modelAttribute="enseignant" action="/collegeWeb/">
 
  
 Département: <form:select path="Departement.idDepartement" items="${departements}"
