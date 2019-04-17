@@ -9,7 +9,7 @@
 
 <head>
 <meta charset="ISO-8859-1">
-<title>Gestion collège</title>
+<title>suivi collège</title>
 </head>
 <body>
 
