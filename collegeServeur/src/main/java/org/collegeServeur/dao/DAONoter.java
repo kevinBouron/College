@@ -1,5 +1,8 @@
 package org.collegeServeur.dao;
 
+import java.util.List;
+
+import org.collegeServeur.entities.Matiere;
 import org.collegeServeur.entities.Noter;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -10,6 +13,31 @@ public class DAONoter implements IDAONoter {
 	
 	@Autowired
 	private SessionFactory sessionFactory;
+
+	public void create(Noter t) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().merge(t);
+	}
+
+	public void update(Noter t) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().update(t);
+	}
+
+	public void delete(Noter t) {
+		// TODO Auto-generated method stub
+		sessionFactory.getCurrentSession().delete(t);
+	}
+
+	public List<Noter> display() {
+		// TODO Auto-generated method stub
+		return sessionFactory.getCurrentSession().createQuery("from Noter").list();
+	}
+
+	public Noter getById(int id) {
+		// TODO Auto-generated method stub
+		return (Noter) sessionFactory.getCurrentSession().get(Noter.class, id);
+	}
 
 
 }
