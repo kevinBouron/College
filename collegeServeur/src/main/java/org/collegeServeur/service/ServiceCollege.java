@@ -9,7 +9,7 @@ import org.springframework.transaction.annotation.Transactional;
 @Transactional
 @Service ("serviceCollege")
 
-public class ServiceCollege implements IService {
+public class ServiceCollege implements IServiceCollege {
 	
 	@Autowired
 	@Qualifier("daoCollege")

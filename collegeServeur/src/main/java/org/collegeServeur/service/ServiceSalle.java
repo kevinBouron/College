@@ -7,7 +7,7 @@ import org.springframework.transaction.annotation.Transactional;
 
 @Transactional
 @Service("serviceSalle")
-public class ServiceSalle implements IService {
+public class ServiceSalle  implements IServiceSalle {
 	
 	@Autowired
 	private DAOSalle dao;

@@ -6,7 +6,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
 
 @Repository("daoSalle")
-public class DAOSalle implements ICRUD<Salle>{
+public class DAOSalle implements IDAOSalle{
 	
 	@Autowired
 	private SessionFactory sessionFactory;

@@ -8,7 +8,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository("daoEtudiant")
-public class DAOEtudiant implements ICRUD<Etudiant> {
+public class DAOEtudiant implements IDAOEtudiant {
 	@Autowired
 	private SessionFactory sessionFactory;
 

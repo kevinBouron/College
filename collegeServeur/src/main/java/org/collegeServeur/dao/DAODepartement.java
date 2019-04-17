@@ -7,7 +7,7 @@ import org.springframework.stereotype.Repository;
 
 
 @Repository("daoDepartement")
-public class DAODepartement implements ICRUD <Departement>{
+public class DAODepartement implements IDAODepartement{
 	
 	@Autowired
 	private SessionFactory sessionFactory;
