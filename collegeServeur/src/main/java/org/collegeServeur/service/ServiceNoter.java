@@ -1,6 +1,9 @@
 package org.collegeServeur.service;
 
+import java.util.List;
+
 import org.collegeServeur.dao.DAONoter;
+import org.collegeServeur.entities.Noter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
@@ -11,6 +14,31 @@ public class ServiceNoter  implements IServiceNoter {
 	
 	@Autowired
 	private DAONoter dao;
+
+	public Noter getById(int id) {
+		// TODO Auto-generated method stub
+		return dao.getById(id);
+	}
+
+	public void create(Noter t) {
+		// TODO Auto-generated method stub
+		dao.create(t);
+	}
+
+	public void update(Noter t) {
+		// TODO Auto-generated method stub
+		dao.update(t);
+	}
+
+	public void delete(Noter t) {
+		// TODO Auto-generated method stub
+		dao.delete(t);
+	}
+
+	public List<Noter> display() {
+		// TODO Auto-generated method stub
+		return dao.display();
+	}
 	
 
 }
