@@ -16,5 +16,7 @@ itemValue="idPersonne" itemLabel="Etudiant"></form:select>
  <br>
 
 <form:button type="submit" value="valider" >ok</form:button>
+</form:form>
+<output>${MoyenneG}</output>
 </body>
 </html>
