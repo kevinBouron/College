@@ -5,8 +5,10 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <title>Gestion Département</title>
 </head>
 <body>
@@ -14,28 +16,36 @@
 <h2> Assigner un enseignant responsable à un département</h2>
 <form:form modelAttribute="departement" action="/">
 
-College: <form:select path="College.idCollege" items="${colleges}" itemValue="idCollege" itemLabel="siteInternet"></form:select> <br>
-Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="nom; prenom; mail; tel"></form:select>
+College: <form:select path="College.idCollege" items="${colleges}" itemValue="idCollege" itemLabel="College"></form:select> <br>
+Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="Enseignant"></form:select>
 
 <form:button type="submit" value="valider" > Valider </form:button>
+</form:form>
 <br>
 
-<table class="table table-bordered" style="width: 600px">
+<table class="table" style="width: 600px">
+ <thead>
          <tr>
-           <th> Nom Département </th>
+           <th>Nom Département </th>
            <th>Enseignant Responsable</th>
            <th>Edit/Delete</th>
          </tr>
-         <c:forEach items="${departements}" var="d">
+       </thead>
+         <tbody>
+         
          <tr>
+         <c:forEach items="${departements}" var="d">
            <td width="60" align="center">${d.nomDepartement}</td>
            <td width="60" align="center">${d.Responsable}</td>
            
            <td width="60" align="center"><a href="">Edit</a>/<a href="">Delete</a></td>
+            </c:forEach>
          </tr>
-      </c:forEach>
+     
+       </tbody>
     </table>
 
-<a href="<c:url value="/j_spring_security_logout"/>" >Se déconnecter </a>
+<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/>" >Se déconnecter </a></button>
+
 </body>
 </html>
