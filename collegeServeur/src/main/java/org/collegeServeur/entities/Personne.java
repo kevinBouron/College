@@ -12,7 +12,7 @@ public class Personne {
 
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
-	private int idPersonne;
+	protected int idPersonne;
 	protected String nom;
 	protected String prenom;
 	protected String mail;
