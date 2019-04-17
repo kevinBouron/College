@@ -19,7 +19,7 @@ public class Departement {
 	private int idDepartement;
 	private String nomDepartement;
 	
-	@OneToMany(mappedBy="departements", cascade=CascadeType.ALL)
+	@OneToMany(mappedBy="departement", cascade=CascadeType.ALL)
 	private List<Enseignant> enseignants;
 	
 	@ManyToOne

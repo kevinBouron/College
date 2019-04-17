@@ -22,7 +22,7 @@ Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" it
 
 <table class="table table-bordered" style="width: 600px">
          <tr>
-           <th> Nom Département </th>
+           <th>Nom Département </th>
            <th>Enseignant Responsable</th>
            <th>Edit/Delete</th>
          </tr>
