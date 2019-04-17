@@ -4,6 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import org.collegeServeur.dao.DAODepartement;
+import org.collegeServeur.dao.DAONoter;
 import org.collegeServeur.entities.Departement;
 import org.collegeServeur.entities.Enseignant;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -15,7 +16,8 @@ import org.springframework.transaction.annotation.Transactional;
 public class ServiceDepartement  implements IServiceDepartement {
 	@Autowired
 	private DAODepartement dao;
-
+	private DAONoter ndao;
+	
 	public Departement getById(int id) {
 		
 		return dao.getById(id);
@@ -53,7 +55,7 @@ public class ServiceDepartement  implements IServiceDepartement {
 			
 			if(e.getMatiere().getIdMatiere()!=0) {
 			idMatieres.add(e.getMatiere().getIdMatiere());
-			sommeMoyenne+=dao.getMoyenneParMatiere(e.getMatiere().getIdMatiere());
+			sommeMoyenne+=ndao.getMoyenneParMatiere(e.getMatiere().getIdMatiere());
 			}
 		}
 		
