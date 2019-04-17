@@ -17,7 +17,7 @@ public class Salle {
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idSalle;
 	
-private int nbrPlace;
+	private int nbrPlace;
 	
 	@OneToMany(mappedBy="salle",cascade=CascadeType.ALL)
 	List<Matiere> matieres;
