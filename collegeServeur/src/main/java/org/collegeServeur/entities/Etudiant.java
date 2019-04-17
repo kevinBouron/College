@@ -27,11 +27,13 @@ public class Etudiant extends Personne {
 	public void setAnneEntree(int anneEntree) {
 		this.anneEntree = anneEntree;
 	}
-	
-	
+
 	@Override
 	public String toString() {
 		return "Etudiant [anneEntree=" + anneEntree + ", idPersonne=" + idPersonne + ", nom=" + nom + ", prenom="
 				+ prenom + ", mail=" + mail + ", tel=" + tel + "]";
 	}
+	
+	
+
 }

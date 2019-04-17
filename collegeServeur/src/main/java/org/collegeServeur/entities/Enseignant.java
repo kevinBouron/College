@@ -43,12 +43,14 @@ public class Enseignant extends Personne {
 	}
 	
 	
+
+	
 	@Override
 	public String toString() {
-		return "Enseignant [datePriseFonction=" + datePriseFonction + ", indice=" + indice + ", idPersonne="
-				+ idPersonne + ", nom=" + nom + ", prenom=" + prenom + ", mail=" + mail + ", tel=" + tel + "]";
+		return "Enseignant [datePriseFonction=" + datePriseFonction + ", indice=" + indice + ", departement="
+				+ departement + ", matiere=" + matiere + ", idPersonne=" + idPersonne + ", nom=" + nom + ", prenom="
+				+ prenom + ", mail=" + mail + ", tel=" + tel + "]";
 	}
-	
 	public Departement getDepartement() {
 		return departement;
 	}

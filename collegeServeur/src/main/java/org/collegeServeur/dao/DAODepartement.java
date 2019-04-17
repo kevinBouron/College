@@ -39,4 +39,5 @@ public class DAODepartement implements IDAODepartement{
 		return (Departement) sessionFactory.getCurrentSession().get(Departement.class, id);
 	}
 
+	
 }
