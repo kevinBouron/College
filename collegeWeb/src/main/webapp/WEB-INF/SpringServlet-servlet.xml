@@ -76,6 +76,11 @@
    <bean id="daoSalle"  class="org.collegeServeur.dao.DAOSalle"></bean>
    <bean id="serviceSalle" class="org.collegeServeur.service.ServiceSalle" ></bean>
    
+   <bean id="daoAdmin"  class="org.collegeServeur.dao.DAOAdmin"></bean>
+   <bean id="serviceAdmin" class="org.collegeServeur.service.ServiceAdmin" ></bean>
+   
+  
+   
    
    <bean id="encoder" class="org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder">
 	<constructor-arg value="12"></constructor-arg>
