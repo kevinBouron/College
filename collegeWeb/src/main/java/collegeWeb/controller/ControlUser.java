@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.collegeServeur.entities.Etudiant;
 import org.collegeServeur.entities.Noter;
+import org.collegeServeur.service.IServiceEtudiant;
+import org.collegeServeur.service.IServiceNoter;
 import org.collegeServeur.service.ServiceEtudiant;
 import org.collegeServeur.service.ServiceNoter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -19,9 +21,9 @@ import org.springframework.web.servlet.ModelAndView;
 public class ControlUser {
 
 	@Autowired
-	ServiceNoter serviceNoter;
+	IServiceNoter serviceNoter;
 	@Autowired
-	ServiceEtudiant serviceEtudiant;
+	IServiceEtudiant serviceEtudiant;
 	
 	@RequestMapping("/noteForm")
 	public ModelAndView note() {
