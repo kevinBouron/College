@@ -19,8 +19,9 @@
 nom: <form:input path="nomDepartement" type="text"/> <br>
 College: <form:select path="college.idCollege" items="${colleges}" itemValue="idCollege" itemLabel="idCollege"></form:select> <br>
 Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="nom"></form:select>
+<br>
+<button type="button" class="btn"> Valider </button>
 
-<form:button type="submit" value="valider" > Valider </form:button>
 </form:form>
 <br>
 
@@ -46,7 +47,7 @@ Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" i
        </tbody>
     </table>
 
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/>" >Se déconnecter </a></button>
+<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > Se déconnecter </a></button>
 
 </body>
 </html>

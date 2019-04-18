@@ -15,7 +15,7 @@ public class College {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idCollege;
-	private int nom;
+	private String nom;
 	private String siteInternet;
 	
 	@OneToMany(mappedBy="college",fetch=FetchType.EAGER)
@@ -67,14 +67,17 @@ public class College {
 	}
 
 
-	public int getNom() {
+	public String getNom() {
 		return nom;
 	}
 
 
-	public void setNom(int nom) {
+	public void setNom(String nom) {
 		this.nom = nom;
 	}
+
+
+
 	
 	
 
