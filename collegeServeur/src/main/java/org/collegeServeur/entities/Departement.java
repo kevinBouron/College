@@ -42,7 +42,7 @@ public class Departement {
 		this.nomDepartement = nomDepartement;
 		this.enseignants = enseignants;
 		this.college = college;
-		responsable = responsable;
+		this.responsable = responsable;
 	}
 
 	public int getIdDepartement() {
@@ -85,16 +85,13 @@ public class Departement {
 		this.responsable = responsable;
 	}
 
-	@Override
-	public String toString() {
-		return "Departement [idDepartement=" + idDepartement + ", nomDepartement=" + nomDepartement + ", college="
-				+ college + ", Responsable=" + responsable + "]";
-	}
+	
+
 
 	@Override
 	public String toString() {
 		return "Departement [idDepartement=" + idDepartement + ", nomDepartement=" + nomDepartement + ", enseignants="
-				+ enseignants + ", college=" + college + ", Responsable=" + Responsable + "]";
+				+ enseignants + ", college=" + college + ", Responsable=" + responsable + "]";
 	}
 	
 	
