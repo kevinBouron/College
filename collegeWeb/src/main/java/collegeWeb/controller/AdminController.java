@@ -49,6 +49,7 @@ public class AdminController {
 		return "GestionCollege";
 	}
 	// ------------------------Departement-----------------------------------
+	
 	@RequestMapping(value = "/admin/GestionDepartement")
 	public ModelAndView gestDep() {
 		ModelAndView view = new ModelAndView("GestionDepartement","departement",new Departement());
