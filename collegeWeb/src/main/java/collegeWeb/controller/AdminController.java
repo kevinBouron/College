@@ -49,6 +49,7 @@ public class AdminController {
 		return "GestionCollege";
 	}
 	// ------------------------Departement-----------------------------------
+	
 	@RequestMapping(value = "/admin/GestionDepartement")
 	public ModelAndView gestDep() {
 		ModelAndView view = new ModelAndView("GestionDepartement","departement",new Departement());
@@ -71,8 +72,6 @@ public class AdminController {
 		List<College> colleges = ServiceCol.display();
 		List<Enseignant> enseignants = serviceEns.display();
 		List<Departement> departements=serviceDep.display();
-		List<Enseignant> ens = serviceEns.display();
-		view.addObject("ens",ens);
 		view.addObject("departements",departements);
 		view.addObject("colleges",colleges);
 		view.addObject("enseignants",enseignants);
@@ -84,14 +83,11 @@ public class AdminController {
 		Departement dep = serviceDep.getById(idDep);
 		List<College> colleges = ServiceCol.display();
 		List<Enseignant> enseignants = serviceEns.display();
-		List<Enseignant> ens = serviceEns.display();
-		view.addObject("ens",ens);
 		List<Departement> departements=serviceDep.display();
 		view.addObject("departements",departements);
 		view.addObject("colleges",colleges);
 		view.addObject("enseignants",enseignants);
 		view.addObject("departement",dep);  
-		view.addObject("departement",new Departement()); 
 		return view;
 	}
 	

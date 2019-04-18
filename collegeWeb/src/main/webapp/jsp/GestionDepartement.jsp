@@ -46,6 +46,7 @@
 	<form:form modelAttribute="departement"
 		action="/collegeWeb/admin/adddDepartement">
 
+<form:input path="idDepartement" type="hidden" />
 Nom du département: <form:input path="nomDepartement" type="text" />
 		<br>
 College: <form:select path="college.idCollege" items="${colleges}"
