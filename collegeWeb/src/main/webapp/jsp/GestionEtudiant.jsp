@@ -5,19 +5,85 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
 <title>Insert title here</title>
 </head>
 <body>
+
+<h1>Gestion des étudiants</h1>
+
+
 <form:form modelAttribute="etudiant" action="/collegeWeb/admin/addEtudiant">
 
-nom: <form:input path="nom" type="text"/> <br>
-prenom: <form:input path="prenom" type="text"/> <br>
-mail: <form:input path="mail" type="text"/> <br>
-tel: <form:input path="tel" type="text"/> <br>
-Année entrée: <form:input path="anneEntree" type="text"/> <br>
+
+<form:input path="nom" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="nom"></form:input>
+ <br>
+  <br>
+  <form:input path="prenom" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="prenom"></form:input>
+  <br>
+   <br>
+   <form:input path="mail" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="mail"></form:input>
+  <br>
+   <br>
+   <form:input path="tel" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="tel"></form:input>
+  <br>
+   <br>
+   <form:input path="anneEntree" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="Année entrée (..../../..) "></form:input>
+  
+ <br>
 
 
-<form:button type="submit" value="valider" >ok</form:button>
+
+<form:button type="submit" value="valider" >valider</form:button>
+
+<table class="table" style="width: 600px">
+ <thead>
+         <tr>
+           <th width="60" align="center">Nom Etudiant </th>
+           <th width="60" align="center">Prenom Etudiant</th>
+            <th width="60" align="center">Mail </th>
+           <th width="60" align="center">Tel</th>
+           <th width="60" align="center">Année d'entrée</th>
+           
+           
+           <th width="60" align="center">Edit/Delete</th>
+         </tr>
+       </thead>
+         <tbody>
+         <c:forEach items="${enseignants}" var="p">
+         <tr>
+         
+           <td width="60" align="center">${p.nom}</td>
+
+           <td width="60" align="center">${p.prenom}</td>
+           
+            <td width="60" align="center">${p.mail}</td>
+
+           <td width="60" align="center">${p.tel}</td>
+           
+           <td width="60" align="center">${p.datePriseFonction}</td>
+           
+           <td width="60" align="left"><a href="editEtu?id=${p.idPersonne}"><i class="fas fa-pen"></i>   </a><a href="suppEtu?id=${p.idPersonne}"><i class="far fa-trash-alt"></i></a></td>
+
+          
+
+          
+         </tr>
+       </c:forEach>
+       </tbody>
+    </table>
+
+
+
+
+
+
+
+<button type="submit" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > Se déconnecter </a></button>
 </form:form>
 </body>
 </html>
