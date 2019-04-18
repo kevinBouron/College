@@ -5,4 +5,5 @@ import org.collegeServeur.entities.Personne;
 
 public interface IDAOPersonne extends ICRUD<Personne> {
 
+
 }

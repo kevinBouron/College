@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
      <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -65,7 +66,7 @@
 
            <td width="60" align="center">${p.tel}</td>
            
-           <td width="60" align="center">${p.datePriseFonction}</td>
+           <td width="60" align="center">${p.anneEntree}</td>
            
            <td width="60" align="left"><a href="editEtu?id=${p.idPersonne}"><i class="fas fa-pen"></i>   </a><a href="suppEtu?id=${p.idPersonne}"><i class="far fa-trash-alt"></i></a></td>
 
@@ -83,7 +84,7 @@
 
 
 
-<button type="submit" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > Se déconnecter </a></button>
+
 </form:form>
 </body>
 </html>

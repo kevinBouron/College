@@ -77,7 +77,7 @@ Enseignant : <form:select path="responsable.idPersonne"
 			</tr>
 		</thead>
 		<tbody>
-			<c:forEach items="${enseignants}" var="e">
+			<c:forEach items="${ens}" var="e">
 				<tr>
 
 					<td width="60" align="center">${e.nom}</td>

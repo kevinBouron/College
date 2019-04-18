@@ -3,6 +3,7 @@ package org.collegeServeur.dao;
 import java.util.List;
 
 import org.collegeServeur.entities.Personne;
+import org.hibernate.Query;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Repository;
@@ -36,5 +37,8 @@ public class DAOPersonne implements IDAOPersonne {
 
 		return sessionFactory.getCurrentSession().createQuery("from Personne p").list();
 	}
+
+
+
 
 }
