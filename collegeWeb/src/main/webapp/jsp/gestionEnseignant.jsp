@@ -16,7 +16,7 @@ nom: <form:input path="nom" type="text"/> <br>
 prenom: <form:input path="prenom" type="text"/> <br>
 mail: <form:input path="mail" type="text"/> <br>
 tel: <form:input path="tel" type="text"/> <br>
-Date de prise de fonction: <form:input path="datePriseFonction" type="text"/> <br>
+Date de prise de fonction: <form:input path="datePriseFonction" type="text"/> (..../../..) <br>
  
 Département: <form:select path="departement.idDepartement" items="${departements}"
 itemValue="idDepartement" itemLabel="nomDepartement"></form:select>
