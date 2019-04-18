@@ -42,7 +42,7 @@ Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" i
          <c:forEach items="${departements}" var="d">
            <td width="60" align="center">${d.nomDepartement}</td>
 
-           <td width="60" align="center">${d.Responsable}</td>
+           <td width="60" align="center">${d.responsable}</td>
            
            <td width="60" align="left"><a href="editDep?id=${d.idDepartement}"><i class="fas fa-pen"></i>   </a><a href="suppDep?id=${d.idDepartement}"><i class="far fa-trash-alt"></i></a></td>
 
