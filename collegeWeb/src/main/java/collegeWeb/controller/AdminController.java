@@ -74,10 +74,10 @@ public class AdminController {
 		view.addObject("enseignants",enseignants);
 		return view ;
 	}
-	@RequestMapping("/editDep")
-	public ModelAndView modifier(@RequestParam int idDepartement) {
+	@RequestMapping("/admin/editDep")
+	public ModelAndView modifier(@RequestParam int idDep) {
 		ModelAndView view=new ModelAndView("GestionDepartement");
-		Departement dep = serviceDep.getById(idDepartement);
+		Departement dep = serviceDep.getById(idDep);
 		List<College> colleges = ServiceCol.display();
 		List<Enseignant> enseignants = serviceEns.display();
 		List<Departement> departements=serviceDep.display();
@@ -85,14 +85,15 @@ public class AdminController {
 		view.addObject("colleges",colleges);
 		view.addObject("enseignants",enseignants);
 		view.addObject("departement",dep);  
+		view.addObject("departement",new Departement()); 
 		return view;
 	}
 	
-	@RequestMapping("/suppDep")
-	public ModelAndView supprimer(@RequestParam int idDepartement){
+	@RequestMapping("/admin/suppDep")
+	public ModelAndView supprimer(@RequestParam int id){
 		
 		ModelAndView view=new ModelAndView("GestionDepartement");
-		Departement dep = serviceDep.getById(idDepartement);
+		Departement dep = serviceDep.getById(id);
 		System.out.println(dep);
 		serviceDep.delete(dep);
 		List<College> colleges = ServiceCol.display();
@@ -126,10 +127,10 @@ public class AdminController {
 		view.addObject("matieres",matieres);
 		return view ;
 	}
-	@RequestMapping("/editEns")
-	public ModelAndView modifierEns(@RequestParam int idPersonne) {
+	@RequestMapping("/admin/editEns")
+	public ModelAndView modifierEns(@RequestParam int id) {
 		ModelAndView view=new ModelAndView("gestionEnseignant");
-		Enseignant ens = serviceEns.GetById(idPersonne);
+		Enseignant ens = serviceEns.GetById(id);
 		List<Departement> departements = serviceDep.display();
 		List<Matiere> matieres = ServiceMat.display();
 		view.addObject("departements",departements);
@@ -138,11 +139,11 @@ public class AdminController {
 		return view;
 	}
 	
-	@RequestMapping("/suppEns")
-	public ModelAndView supprimerEns(@RequestParam int idPersonne){
+	@RequestMapping("/admin/suppEns")
+	public ModelAndView supprimerEns(@RequestParam int id){
 		
 		ModelAndView view=new ModelAndView("gestionEnseignant");
-		Enseignant ens = serviceEns.GetById(idPersonne);
+		Enseignant ens = serviceEns.GetById(id);
 		System.out.println(ens);
 		serviceEns.delete(ens);
 		List<Departement> departements = serviceDep.display();
@@ -172,21 +173,21 @@ public class AdminController {
 		return view ;
 	}
 	
-	@RequestMapping("/editEtu")
-	public ModelAndView modifierEtu(@RequestParam int idPersonne) {
+	@RequestMapping("/admin/editEtu")
+	public ModelAndView modifierEtu(@RequestParam int id) {
 		ModelAndView view=new ModelAndView("GestionEtudiant");
-		Etudiant etu = ServiceEtu.GetById(idPersonne);
+		Etudiant etu = ServiceEtu.GetById(id);
 		List<Etudiant> etudiants = ServiceEtu.display();
 		view.addObject("etudiants",etudiants);
 		view.addObject("etudiant",etu);  
 		return view;
 	}
 	
-	@RequestMapping("/suppEtu")
-	public ModelAndView supprimerEtu(@RequestParam int idPersonne){
+	@RequestMapping("/admin/suppEtu")
+	public ModelAndView supprimerEtu(@RequestParam int id){
 		
 		ModelAndView view=new ModelAndView("GestionEtudiant");
-		Etudiant etu = ServiceEtu.GetById(idPersonne);
+		Etudiant etu = ServiceEtu.GetById(id);
 		System.out.println(etu);
 		ServiceEtu.delete(etu);
 		List<Etudiant> etudiants = ServiceEtu.display();
@@ -213,21 +214,21 @@ public class AdminController {
 		return view ;
 	}
 	
-	@RequestMapping("/editSalle")
-	public ModelAndView modifierSalle(@RequestParam int idSalle) {
+	@RequestMapping("/admin/editSalle")
+	public ModelAndView modifierSalle(@RequestParam int id) {
 		ModelAndView view=new ModelAndView("gestionEnseignant");
-		Salle salle= ServiceSal.getById(idSalle);
+		Salle salle= ServiceSal.getById(id);
 		List<Salle> salles = ServiceSal.display();
 		view.addObject("salles",salles);
 		view.addObject("salle",salle);  
 		return view;
 	}
 	
-	@RequestMapping("/suppSalle")
-	public ModelAndView supprimerSalle(@RequestParam int idSalle){
+	@RequestMapping("/admin/suppSalle")
+	public ModelAndView supprimerSalle(@RequestParam int id){
 		
 		ModelAndView view=new ModelAndView("gestionEnseignant");
-		Salle salle= ServiceSal.getById(idSalle);
+		Salle salle= ServiceSal.getById(id);
 		System.out.println(salle);
 		ServiceSal.delete(salle);
 		List<Salle> salles = ServiceSal.display();
@@ -261,10 +262,10 @@ public class AdminController {
 		return view ;
 	}
 	
-	@RequestMapping("/editMat")
-	public ModelAndView modifierMat(@RequestParam int idMatiere) {
+	@RequestMapping("/admin/editMat")
+	public ModelAndView modifierMat(@RequestParam int id) {
 		ModelAndView view=new ModelAndView("GestionMatiere");
-		Matiere mat=ServiceMat.getById(idMatiere);
+		Matiere mat=ServiceMat.getById(id);
 		List<Salle> salles = ServiceSal.display();
 		view.addObject("salles",salles);
 		List<Matiere> matieres = ServiceMat.display();
@@ -274,11 +275,11 @@ public class AdminController {
 		return view;
 	}
 	
-	@RequestMapping("/suppMat")
-	public ModelAndView supprimerMat(@RequestParam int idMatiere){
+	@RequestMapping("/admin/suppMat")
+	public ModelAndView supprimerMat(@RequestParam int id){
 		
 		ModelAndView view=new ModelAndView("GestionMatiere");
-		Matiere mat=ServiceMat.getById(idMatiere);
+		Matiere mat=ServiceMat.getById(id);
 		System.out.println(mat);
 		ServiceMat.delete(mat);
 		List<Salle> salles = ServiceSal.display();
@@ -314,21 +315,21 @@ public class AdminController {
 	
 	}
 	
-	@RequestMapping("/editCol")
-	public ModelAndView modifierCol(@RequestParam int idCollege) {
+	@RequestMapping("/admin/editCol")
+	public ModelAndView modifierCol(@RequestParam int id) {
 		ModelAndView view=new ModelAndView("creationCollege");
-		College c = ServiceCol.getById(idCollege);
+		College c = ServiceCol.getById(id);
 		List<College> colleges = ServiceCol.display();
 		view.addObject("colleges",colleges);
 		view.addObject("college",c);  
 		return view;
 	}
 	
-	@RequestMapping("/suppCol")
-	public ModelAndView supprimerCol(@RequestParam int idCollege){
+	@RequestMapping("/admin/suppCol")
+	public ModelAndView supprimerCol(@RequestParam int id){
 		
 		ModelAndView view=new ModelAndView("creationCollege");
-		College c = ServiceCol.getById(idCollege);
+		College c = ServiceCol.getById(id);
 		System.out.println(c);
 		ServiceCol.delete(c);
 		List<College> colleges = ServiceCol.display();

@@ -44,7 +44,7 @@ Enseignant : <form:select path="responsable.idPersonne" items="${enseignants}" i
 
            <td width="60" align="center">${d.responsable}</td>
            
-           <td width="60" align="left"><a href="editDep?id=${d.idDepartement}"><i class="fas fa-pen"></i>   </a><a href="suppDep?id=${d.idDepartement}"><i class="far fa-trash-alt"></i></a></td>
+           <td width="60" align="left"><a href="editDep?idDep=${d.idDepartement}">  edit </a><a href="suppDep?id=${d.idDepartement}">delete</a></td>
 
           
 
