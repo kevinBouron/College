@@ -251,6 +251,7 @@ public class AdminController {
 	
 	@RequestMapping(value = "/admin/addMatiere")
 	public ModelAndView addMat(@ModelAttribute("matiere")Matiere mat) {
+		System.out.println(mat);
 		ServiceMat.create(mat);
 		ModelAndView view = new ModelAndView("GestionMatiere","matiere",new Matiere());
 		List<Matiere> matieres = ServiceMat.display();
@@ -304,6 +305,7 @@ public class AdminController {
 	
 	@RequestMapping(value = "/admin/addCollege")
 	public ModelAndView addCol(@ModelAttribute("college")College col) {
+		System.out.println(col);
 		ServiceCol.create(col);
 		ModelAndView view = new ModelAndView("creationCollege","college",new College());
 		List<College> colleges = ServiceCol.display();

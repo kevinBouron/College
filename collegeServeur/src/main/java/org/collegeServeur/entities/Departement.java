@@ -85,15 +85,15 @@ public class Departement {
 		this.responsable = responsable;
 	}
 
-	
-
-
 	@Override
 	public String toString() {
-		return "Departement [idDepartement=" + idDepartement + ", nomDepartement=" + nomDepartement + ", enseignants="
-				+ enseignants + ", college=" + college + ", Responsable=" + responsable + "]";
+		return "Departement [idDepartement=" + idDepartement + ", responsable=" + responsable + "]";
 	}
+
 	
+
+
+
 	
 	
 	
