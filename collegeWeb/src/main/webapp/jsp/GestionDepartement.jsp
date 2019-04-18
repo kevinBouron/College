@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -40,8 +41,7 @@ Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" i
          <tr>
          <c:forEach items="${departements}" var="d">
            <td width="60" align="center">${d.nomDepartement}</td>
-           <td width="60" align="center">${d.Responsable}</td>
-           
+           <td width="60" align="center">${d.responsable}</td>
            <td width="60" align="center"><a href=""><i class="fas fa-pen"></i>   </a><a href=""><i class="far fa-trash-alt"></i></a></td>
             </c:forEach>
          </tr>
@@ -49,7 +49,6 @@ Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" i
        </tbody>
     </table>
 
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i> Se déconnecter </a></button>
 
 </body>
 </html>

@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form:form modelAttribute="note" action="/CollegeWeb/user/addNote">
+<form:form modelAttribute="noter" action="/CollegeWeb/user/addNote">
 <br>
 Etudiant: <form:select path="etudiant.idPersonne" items="${etudiants}"
 itemValue="idPersonne" itemLabel="nom"></form:select>
@@ -23,7 +23,7 @@ Note: <form:input path="note" type="text"/> <br>
 <form:button type="submit" value="valider" >ok</form:button>
 </form:form>
 
-<a href="<c:url value="/j_spring_security_logout"/>" >logout</a>
+<a href="<c:url value="/j_spring_security_logout"/ > Se déconnecter </a>
 
 <table>
 		<thead>
