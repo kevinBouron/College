@@ -27,7 +27,7 @@ crossorigin='anonymous'>
       <a class="nav-link" href="/collegeWeb/user/"> Aller à l'accueil Utilisateur </a>
     </li>
     <li class="nav-item">
-      <a class="nav-link" href="#">Link</a>
+      <a class="nav-link" href="#"></a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
