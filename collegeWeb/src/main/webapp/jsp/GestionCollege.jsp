@@ -18,6 +18,29 @@ crossorigin='anonymous'>
 <title>Insert title here</title>
 </head>
 <body>
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<h1>Gestion collège</h1>
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
+
+
+
+
 <table>
 
 <form:form modelAttribute="College" action="/collegeWeb/admin/home">

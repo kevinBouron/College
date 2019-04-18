@@ -15,6 +15,25 @@
 </head>
 <body>
 
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<h1>Gestion des matières</h1>
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
 <form:form modelAttribute="matiere" action="/collegeWeb/admin/addMatiere">
 
 nom: <form:input path="nom" type="text"/> <br>

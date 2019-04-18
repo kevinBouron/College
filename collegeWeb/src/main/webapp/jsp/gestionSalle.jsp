@@ -15,6 +15,28 @@
 </head>
 <body>
 
+
+
+<nav class="navbar navbar-expand-sm bg-primary navbar-dark">
+<h1>Gestion des salles</h1>
+  <ul class="navbar-nav">
+    <li class="nav-item active">
+      <a class="nav-link" href="#">Active</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link" href="#">Link</a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link disabled" href="#">Disabled</a>
+    </li>
+  </ul>
+</nav>
+
+
+
 <form:form modelAttribute="salle" action="/collegeWeb/admin/addSalles">
 
  nom: <form:input path="nom" type="text"/> <br>
