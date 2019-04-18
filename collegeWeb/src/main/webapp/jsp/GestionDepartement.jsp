@@ -14,10 +14,11 @@
 <body>
 
 <h2> Assigner un enseignant responsable à un département</h2>
-<form:form modelAttribute="departement" action="/">
+<form:form modelAttribute="departement" action="/collegeWeb/admin/adddDepartement">
 
-College: <form:select path="College.idCollege" items="${colleges}" itemValue="idCollege" itemLabel="College"></form:select> <br>
-Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="Enseignant"></form:select>
+nom: <form:input path="nomDepartement" type="text"/> <br>
+College: <form:select path="college.idCollege" items="${colleges}" itemValue="idCollege" itemLabel="idCollege"></form:select> <br>
+Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="nom"></form:select>
 
 <form:button type="submit" value="valider" > Valider </form:button>
 </form:form>

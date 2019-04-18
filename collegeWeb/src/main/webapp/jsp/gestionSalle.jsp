@@ -11,9 +11,10 @@
 
 <form:form modelAttribute="Salle" action="/collegeWeb/">
 
- 
-Matières: <form:select path="Matiere.idMatiere" items="${matieres}"
-itemValue="idMatiere" itemLabel="nom"></form:select>
+ nom: <form:input path="nom" type="text"/> <br>
+<%-- Matières: <form:select path="Matiere.idMatiere" items="${matieres}" --%>
+<%-- itemValue="idMatiere" itemLabel="nom"></form:select> --%>
+nombre de place: <form:input path="nbrPlace" type="text"/> <br>
  <br>
  
  <form:button type="submit" value="valider" >valider</form:button>

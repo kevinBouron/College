@@ -11,7 +11,7 @@
 <form:form modelAttribute="etudiant" action="/collegeWeb/">
 
 
-Etudiants: <form:select path="Etudiant.idPersonne" items="${etudiants}"
+Etudiants: <form:select path="idPersonne" items="${etudiants}"
 itemValue="idPersonne" itemLabel="Etudiant"></form:select>
  <br>
 
