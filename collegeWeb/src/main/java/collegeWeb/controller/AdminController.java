@@ -7,12 +7,15 @@ import org.collegeServeur.entities.Departement;
 import org.collegeServeur.entities.Enseignant;
 import org.collegeServeur.entities.Etudiant;
 import org.collegeServeur.entities.Matiere;
+import org.collegeServeur.entities.Salle;
 import org.collegeServeur.service.IServiceCollege;
 import org.collegeServeur.service.IServiceDepartement;
 import org.collegeServeur.service.IServiceEnseignant;
 import org.collegeServeur.service.IServiceEtudiant;
 import org.collegeServeur.service.IServiceMatiere;
+import org.collegeServeur.service.IServiceSalle;
 import org.collegeServeur.service.ServiceCollege;
+import org.collegeServeur.service.ServiceSalle;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -32,6 +35,8 @@ public class AdminController {
 	private IServiceEtudiant ServiceEtu;
 	@Autowired
 	private IServiceMatiere ServiceMat;
+	@Autowired
+	private IServiceSalle ServiceSal;
 	
 	@RequestMapping(value = "/login")
 	public String Authentif() {
@@ -107,13 +112,41 @@ public class AdminController {
 	}
 	
 	@RequestMapping(value = "/admin/GestionSalles")
-	public String gestSalle() {
-		return "GestionEtudiant";
+	public ModelAndView gestSalle() {
+		ModelAndView view = new ModelAndView("gestionSalle","salle",new Salle());
+		List<Salle> salles = ServiceSal.display();
+		view.addObject("salles",salles);
+		return view ;
+	}
+	
+	@RequestMapping(value = "/admin/addSalles")
+	public ModelAndView addSalle(@ModelAttribute("salle")Salle salle) {
+		ServiceSal.create(salle);
+		ModelAndView view = new ModelAndView("gestionSalle","salle",new Salle());
+		List<Salle> salles = ServiceSal.display();
+		view.addObject("salles",salles);
+		return view ;
 	}
 	
 	@RequestMapping(value = "/admin/GestionMatiere")
-	public String gestMat() {
-		return "GestionMatiere";
+	public ModelAndView gestMat() {
+		ModelAndView view = new ModelAndView("GestionMatiere","matiere",new Matiere());
+		List<Matiere> matieres = ServiceMat.display();
+		List<Salle> salles = ServiceSal.display();
+		view.addObject("salles",salles);
+		view.addObject("matieres",matieres);
+		return view ;
+	}
+	
+	@RequestMapping(value = "/admin/addMatiere")
+	public ModelAndView addMat(@ModelAttribute("matiere")Matiere mat) {
+		ServiceMat.create(mat);
+		ModelAndView view = new ModelAndView("GestionMatiere","matiere",new Matiere());
+		List<Matiere> matieres = ServiceMat.display();
+		List<Salle> salles = ServiceSal.display();
+		view.addObject("salles",salles);
+		view.addObject("matieres",matieres);
+		return view ;
 	}
 	
 }
