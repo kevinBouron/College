@@ -18,7 +18,7 @@ Salle: <form:select path="salle.idSalle" items="${salles}" itemValue="idSalle" i
 <%-- Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="Enseignant"></form:select> --%>
 
 <button type="button" class="btn"> Valider </button>
-
+</form:form>
 
 </body>
 </html>

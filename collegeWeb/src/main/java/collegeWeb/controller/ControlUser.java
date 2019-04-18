@@ -6,8 +6,6 @@ import org.collegeServeur.entities.Etudiant;
 import org.collegeServeur.entities.Noter;
 import org.collegeServeur.service.IServiceEtudiant;
 import org.collegeServeur.service.IServiceNoter;
-import org.collegeServeur.service.ServiceEtudiant;
-import org.collegeServeur.service.ServiceNoter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -25,53 +23,54 @@ public class ControlUser {
 	@Autowired
 	IServiceEtudiant serviceEtudiant;
 	
-	@RequestMapping("/noteForm")
-	public ModelAndView note() {
+	
+	
+	@RequestMapping("/user/home")
+	public String userHome() {
+		return "GestionNote";
+	}
+	
+	@RequestMapping("/user/GestionNote")
+	public ModelAndView gestNote() {
 		ModelAndView view=new ModelAndView("GestionNote","note",new Noter());
 		List<Noter> notes=serviceNoter.display();
 		view.addObject("ListeNotes",notes);
 		return view;
 }
 
-	@RequestMapping("/addNote")
+	@RequestMapping("/user/addNote")
 	public ModelAndView ajout(@ModelAttribute("note")Noter noter) {
-		
-		
 		serviceNoter.create(noter);
-		return new ModelAndView("noteForm");
+		ModelAndView view=new ModelAndView("GestionNote","note",new Noter());
+		List<Noter> notes=serviceNoter.display();
+		view.addObject("ListeNotes",notes);
+		return view;
 		
 	}
 	
 	
-	@RequestMapping("/editEtud")
+	@RequestMapping("/user/editEtud")
 	public ModelAndView modifier(@RequestParam int id) {
 		ModelAndView view=new ModelAndView("GestionNote");
 		Etudiant e=serviceEtudiant.GetById(id);
 		List <Noter> notes=serviceNoter.display();
-		
-		
 		view.addObject("etudiant",e);
 	    view.addObject("ListeNotes",notes);
 		return view;
 		
 	}
 	
-//	------------------------------WIP--------------------------------------------- //
-	
-	@RequestMapping("/detailsE")
-	public ModelAndView detailsEtud(@ModelAttribute("note")Noter noter) {
+
+	@RequestMapping("/user/detailsE")
+	public ModelAndView detailsEtud() {
 		
-		
-		serviceNoter.create(noter);
-		return new ModelAndView("noteForm");
+		return new ModelAndView("SuiviEtud");
 		
 	}
-	@RequestMapping("/detailsC")
-	public ModelAndView detailsColl(@ModelAttribute("note")Noter noter) {
+	@RequestMapping("/user/detailsC")
+	public ModelAndView detailsColl() {
 		
-		
-		serviceNoter.create(noter);
-		return new ModelAndView("noteForm");
+		return new ModelAndView("SuiviCollege");
 		
 	}
 	
