@@ -31,9 +31,9 @@ Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" i
 <table class="table" style="width: 600px">
  <thead>
          <tr>
-           <th>Nom Département </th>
-           <th>Enseignant Responsable</th>
-           <th>Edit/Delete</th>
+           <th width="60" align="center">Nom Département </th>
+           <th width="60" align="center">Enseignant Responsable</th>
+           <th width="60" align="center">Edit/Delete</th>
          </tr>
        </thead>
          <tbody>
@@ -41,8 +41,14 @@ Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" i
          <tr>
          <c:forEach items="${departements}" var="d">
            <td width="60" align="center">${d.nomDepartement}</td>
+<<<<<<< HEAD
+           <td width="60" align="center">${d.Responsable}</td>
+           
+           <td width="60" align="left"><a href="editDep?id=${d.idDepartement}"><i class="fas fa-pen"></i>   </a><a href="suppDep?id=${d.idDepartement}"><i class="far fa-trash-alt"></i></a></td>
+=======
            <td width="60" align="center">${d.responsable}</td>
            <td width="60" align="center"><a href=""><i class="fas fa-pen"></i>   </a><a href=""><i class="far fa-trash-alt"></i></a></td>
+>>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
             </c:forEach>
          </tr>
      

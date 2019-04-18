@@ -16,6 +16,7 @@ import org.springframework.transaction.annotation.Transactional;
 public class ServiceDepartement  implements IServiceDepartement {
 	@Autowired
 	private DAODepartement dao;
+	@Autowired
 	private DAONoter ndao;
 	
 	public Departement getById(int id) {

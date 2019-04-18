@@ -35,8 +35,12 @@
 			<props>
 				<prop key="hibernate.dialect">org.hibernate.dialect.MySQLDialect
 				</prop>
+<<<<<<< HEAD
+				<prop key="hibernate.hbm2ddl.auto">update</prop>
+=======
 				<prop key="hibernate.hbm2ddl.auto">update
 				</prop>
+>>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
 				<prop key="hibernate.show_sql">true</prop>
 			</props>
 		</property>

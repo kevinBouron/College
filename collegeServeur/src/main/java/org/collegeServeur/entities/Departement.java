@@ -4,6 +4,7 @@ import java.util.List;
 
 import javax.persistence.CascadeType;
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -11,6 +12,9 @@ import javax.persistence.JoinColumn;
 import javax.persistence.ManyToOne;
 import javax.persistence.OneToMany;
 import javax.persistence.OneToOne;
+
+import org.hibernate.annotations.LazyCollection;
+import org.hibernate.annotations.LazyCollectionOption;
 
 @Entity
 public class Departement {
@@ -20,6 +24,7 @@ public class Departement {
 	private String nomDepartement;
 	
 	@OneToMany(mappedBy="departement", cascade=CascadeType.ALL)
+	@LazyCollection(LazyCollectionOption.FALSE)
 	private List<Enseignant> enseignants;
 	
 	@ManyToOne
@@ -37,7 +42,7 @@ public class Departement {
 		this.nomDepartement = nomDepartement;
 		this.enseignants = enseignants;
 		this.college = college;
-		responsable = responsable;
+		this.responsable = responsable;
 	}
 
 	public int getIdDepartement() {
@@ -80,10 +85,13 @@ public class Departement {
 		this.responsable = responsable;
 	}
 
+	
+
+
 	@Override
 	public String toString() {
-		return "Departement [idDepartement=" + idDepartement + ", nomDepartement=" + nomDepartement + ", college="
-				+ college + ", Responsable=" + responsable + "]";
+		return "Departement [idDepartement=" + idDepartement + ", nomDepartement=" + nomDepartement + ", enseignants="
+				+ enseignants + ", college=" + college + ", Responsable=" + responsable + "]";
 	}
 	
 	
