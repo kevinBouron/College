@@ -27,7 +27,7 @@ public class Departement {
 	private College college;
 	
 	@OneToOne(cascade=CascadeType.ALL)
-	private Enseignant Responsable;
+	private Enseignant responsable;
 
 	public Departement() {
 		
@@ -37,7 +37,7 @@ public class Departement {
 		this.nomDepartement = nomDepartement;
 		this.enseignants = enseignants;
 		this.college = college;
-		Responsable = responsable;
+		responsable = responsable;
 	}
 
 	public int getIdDepartement() {
@@ -73,11 +73,17 @@ public class Departement {
 	}
 
 	public Enseignant getResponsable() {
-		return Responsable;
+		return responsable;
 	}
 
 	public void setResponsable(Enseignant responsable) {
-		Responsable = responsable;
+		this.responsable = responsable;
+	}
+
+	@Override
+	public String toString() {
+		return "Departement [idDepartement=" + idDepartement + ", nomDepartement=" + nomDepartement + ", college="
+				+ college + ", Responsable=" + responsable + "]";
 	}
 	
 	
