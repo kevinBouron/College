@@ -9,7 +9,7 @@
 </head>
 <body>
 
-<form:form modelAttribute="noter" action="/CollegeWeb/*****">
+<form:form modelAttribute="note" action="/CollegeWeb/user/addNote">
 <br>
 Etudiant: <form:select path="etudiant.idPersonne" items="${etudiants}"
 itemValue="idPersonne" itemLabel="nom"></form:select>
