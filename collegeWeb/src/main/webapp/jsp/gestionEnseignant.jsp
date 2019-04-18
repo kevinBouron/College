@@ -12,21 +12,39 @@
 <form:form modelAttribute="enseignant" action="/collegeWeb/admin/addEnseignant">
 
 
-nom: <form:input path="nom" type="text"/> <br>
-prenom: <form:input path="prenom" type="text"/> <br>
-mail: <form:input path="mail" type="text"/> <br>
-tel: <form:input path="tel" type="text"/> <br>
-Date de prise de fonction: <form:input path="datePriseFonction" type="text"/> (..../../..) <br>
+
+ <form:input path="nom" type="text" class="form-control form-control-lg" placeholder="nom"></form:input>
+ <br>
+  <br>
+  <form:input path="prenom" type="text" class="form-control form-control-lg" placeholder="prenom"></form:input>
+  <br>
+   <br>
+   <form:input path="mail" type="text" class="form-control form-control-lg" placeholder="mail"></form:input>
+  <br>
+   <br>
+   <form:input path="tel" type="text" class="form-control form-control-lg" placeholder="tel"></form:input>
+  <br>
+   <br>
+   <form:input path="datePriseFonction" type="text" class="form-control form-control-lg" placeholder="Date de prise de fonction (..../../..) "></form:input>
+  
+ <br>
  
+
+
+
+
+
 Département: <form:select path="departement.idDepartement" items="${departements}"
-itemValue="idDepartement" itemLabel="nomDepartement"></form:select>
+itemValue="idDepartement" itemLabel="nomDepartement">
+<option>Département</option>
+</form:select>
  <br>
  
 Matière: <form:select path="matiere.idMatiere" items="${matieres}"
 itemValue="idMatiere" itemLabel="nom"></form:select>
- <br>
 
 
+<br>
 
 <form:button type="submit" value="valider" >valider</form:button>
 

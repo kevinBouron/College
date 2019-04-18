@@ -41,6 +41,11 @@ public class ServiceSalle  implements IServiceSalle {
 	
 		return dao.display();
 	}
+
+	public Salle getById(int id) {
+		// TODO Auto-generated method stub
+		return dao.getById(id);
+	}
 	
 	
 	
