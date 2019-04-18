@@ -3,8 +3,10 @@ package collegeWeb.controller;
 import java.util.List;
 
 import org.collegeServeur.entities.Etudiant;
+import org.collegeServeur.entities.Matiere;
 import org.collegeServeur.entities.Noter;
 import org.collegeServeur.service.IServiceEtudiant;
+import org.collegeServeur.service.IServiceMatiere;
 import org.collegeServeur.service.IServiceNoter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
@@ -22,7 +24,8 @@ public class ControlUser {
 	IServiceNoter serviceNoter;
 	@Autowired
 	IServiceEtudiant serviceEtudiant;
-	
+	@Autowired
+	IServiceMatiere serviceMatiere;
 	
 	
 	@RequestMapping("/user/home")
@@ -32,18 +35,26 @@ public class ControlUser {
 	
 	@RequestMapping("/user/GestionNote")
 	public ModelAndView gestNote() {
-		ModelAndView view=new ModelAndView("GestionNote","note",new Noter());
+		ModelAndView view=new ModelAndView("GestionNote","noter",new Noter());
 		List<Noter> notes=serviceNoter.display();
+		List<Etudiant> etudiants=serviceEtudiant.display();
+		List<Matiere> matieres=serviceMatiere.display();
 		view.addObject("ListeNotes",notes);
+		view.addObject("ListeEtuds",etudiants);
+		view.addObject("ListeMats",matieres);
 		return view;
 }
 
 	@RequestMapping("/user/addNote")
-	public ModelAndView ajout(@ModelAttribute("note")Noter noter) {
+	public ModelAndView ajout(@ModelAttribute("noter")Noter noter) {
 		serviceNoter.create(noter);
-		ModelAndView view=new ModelAndView("GestionNote","note",new Noter());
+		ModelAndView view=new ModelAndView();
 		List<Noter> notes=serviceNoter.display();
+		List<Etudiant> etudiants=serviceEtudiant.display();
+		List<Matiere> matieres=serviceMatiere.display();
 		view.addObject("ListeNotes",notes);
+		view.addObject("ListeEtuds",etudiants);
+		view.addObject("ListeMats",matieres);
 		return view;
 		
 	}
@@ -61,17 +72,15 @@ public class ControlUser {
 	}
 	
 
-	@RequestMapping("/user/detailsE")
-	public ModelAndView detailsEtud() {
-		
-		return new ModelAndView("SuiviEtud");
-		
-	}
-	@RequestMapping("/user/detailsC")
-	public ModelAndView detailsColl() {
+	@RequestMapping("/redirectColl")
+	public ModelAndView infosCollege() {
 		
 		return new ModelAndView("SuiviCollege");
 		
 	}
-	
+	@RequestMapping("/redirectEtud")
+	public ModelAndView infosEtudiant() {
+		
+		return new ModelAndView("SuivitEtud"); 
+	}	
 }
