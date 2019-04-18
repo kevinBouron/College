@@ -26,7 +26,7 @@
 <h1>Gestion Département</h1>
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="#">Active</a>
+      <a class="nav-link" href="/collegeWeb/admin/home">Aller à l'accueil Gestion</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
@@ -64,6 +64,7 @@ Enseignant : <form:select path="responsable.idPersonne"
 			<tr>
 				<th width="60" align="center">Nom Département</th>
 				<th width="60" align="center">Enseignant Responsable</th>
+				<th width="60" align="center">College</th>
 				<th width="60" align="center">Edit/Delete</th>
 			</tr>
 		</thead>
@@ -74,6 +75,7 @@ Enseignant : <form:select path="responsable.idPersonne"
 					<td width="60" align="center">${d.nomDepartement}</td>
 
 					<td width="60" align="center">${d.responsable.idPersonne}</td>
+					<td width="60" align="center">${d.college.nom}</td>
 
 					<td width="60" align="left"><a
 						href="editDep?idDep=${d.idDepartement}"> edit </a><a
@@ -87,28 +89,7 @@ Enseignant : <form:select path="responsable.idPersonne"
 		</tbody>
 	</table>
 
-	<table class="table" style="width: 600px">
-		<thead>
-			<tr>
-				<th width="60" align="center">Nom Enseignant</th>
-				<th width="60" align="center">Prénom Enseignant</th>
-
-
-			</tr>
-		</thead>
-		<tbody>
-			<c:forEach items="${ens}" var="e">
-				<tr>
-
-					<td width="60" align="center">${e.nom}</td>
-
-					<td width="60" align="center">${e.prenom}</td>
-
-
-				</tr>
-			</c:forEach>
-		</tbody>
-	</table>
+	
 
 
 

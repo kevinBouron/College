@@ -28,6 +28,13 @@ public class ControlUser {
 	IServiceMatiere serviceMatiere;
 	
 	
+	@RequestMapping("/user/accueil")
+	public String AccueilUser() {
+		return "AccueilUser";
+		
+	}
+	
+	
 	@RequestMapping("/user/home")
 	public String userHome() {
 		return "GestionNote";

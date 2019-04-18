@@ -20,7 +20,7 @@
 <h1>Gestion des étudiants</h1>
   <ul class="navbar-nav">
     <li class="nav-item active">
-      <a class="nav-link" href="#">Active</a>
+      <a class="nav-link" href="/collegeWeb/admin/home">Active</a>
     </li>
     <li class="nav-item">
       <a class="nav-link" href="#">Link</a>
