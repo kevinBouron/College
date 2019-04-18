@@ -48,7 +48,7 @@ public class AdminController {
 	public String adminHome() {
 		return "GestionCollege";
 	}
-	
+	// ------------------------Departement-----------------------------------
 	@RequestMapping(value = "/admin/GestionDepartement")
 	public ModelAndView gestDep() {
 		ModelAndView view = new ModelAndView("GestionDepartement","departement",new Departement());
@@ -105,7 +105,7 @@ public class AdminController {
 		 return view;
 		
 	}
-	
+	// ------------------------Enseignant-----------------------------------
 	@RequestMapping(value = "/admin/GestionEnseignant")
 	public ModelAndView gestEns() {
 		ModelAndView view = new ModelAndView("gestionEnseignant","enseignant",new Enseignant());
@@ -153,7 +153,7 @@ public class AdminController {
 		 return view;
 		
 	}
-	
+	// ------------------------Etudiant-----------------------------------
 	
 	@RequestMapping(value = "/admin/GestionEtudiant")
 	public ModelAndView gestEtu() {
@@ -195,7 +195,7 @@ public class AdminController {
 		 return view;
 		
 	}
-	
+	// ------------------------Salle-----------------------------------
 	@RequestMapping(value = "/admin/GestionSalles")
 	public ModelAndView gestSalle() {
 		ModelAndView view = new ModelAndView("gestionSalle","salle",new Salle());
@@ -237,6 +237,8 @@ public class AdminController {
 		
 	}
 	
+	
+	// ------------------------Matiere-----------------------------------
 	@RequestMapping(value = "/admin/GestionMatiere")
 	public ModelAndView gestMat() {
 		ModelAndView view = new ModelAndView("GestionMatiere","matiere",new Matiere());
@@ -288,7 +290,7 @@ public class AdminController {
 		 return view;
 	}
 	
-//	-----------------------------------------------------------------------------------
+//	---------------------------------College----------------------------------------
 	
 	@RequestMapping(value = "/admin/GestionCollege")
 	public ModelAndView gestCol() {

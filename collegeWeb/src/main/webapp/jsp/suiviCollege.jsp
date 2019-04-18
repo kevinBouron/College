@@ -23,9 +23,20 @@ Calculer la moyenne générale du département : <br>
 <output type="text" value="${}"></output> <br>
 
 <button type="button" class="btn">Valider</button>
+</form:form>
+
+
+Afficher moyenne d'une matière:
+<form:form modelAttribute="note" action="/">
+Matière: <form:select path="Noter.idMatiere" items="${departements}" itemValue="idDepartement" itemLabel="nomDepartement"></form:select> <br>
+<output type="text" value="${}"></output> <br>
+
+
+
 <button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i>Se déconnecter </a></button>
 
 
-</form:form>
+
+
 </body>
 </html>
