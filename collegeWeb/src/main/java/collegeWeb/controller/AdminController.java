@@ -20,6 +20,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.servlet.ModelAndView;
 
 @Controller
@@ -54,6 +55,7 @@ public class AdminController {
 		List<College> colleges = ServiceCol.display();
 		List<Enseignant> enseignants = serviceEns.display();
 		List<Departement> departements=serviceDep.display();
+		System.out.println(departements);
 		view.addObject("colleges",colleges);
 		view.addObject("enseignants",enseignants);
 		view.addObject("departements",departements);
@@ -71,6 +73,37 @@ public class AdminController {
 		view.addObject("colleges",colleges);
 		view.addObject("enseignants",enseignants);
 		return view ;
+	}
+	@RequestMapping("/editDep")
+	public ModelAndView modifier(@RequestParam int idDepartement) {
+		ModelAndView view=new ModelAndView("GestionDepartement");
+		Departement dep = serviceDep.getById(idDepartement);
+		List<College> colleges = ServiceCol.display();
+		List<Enseignant> enseignants = serviceEns.display();
+		List<Departement> departements=serviceDep.display();
+		view.addObject("departements",departements);
+		view.addObject("colleges",colleges);
+		view.addObject("enseignants",enseignants);
+		view.addObject("departement",dep);  
+		return view;
+	}
+	
+	@RequestMapping("/suppDep")
+	public ModelAndView supprimer(@RequestParam int idDepartement){
+		
+		ModelAndView view=new ModelAndView("GestionDepartement");
+		Departement dep = serviceDep.getById(idDepartement);
+		System.out.println(dep);
+		serviceDep.delete(dep);
+		List<College> colleges = ServiceCol.display();
+		List<Enseignant> enseignants = serviceEns.display();
+		List<Departement> departements=serviceDep.display();
+		view.addObject("departements",departements);
+		view.addObject("colleges",colleges);
+		view.addObject("enseignants",enseignants);
+		view.addObject("departement",new Departement());
+		 return view;
+		
 	}
 	
 	@RequestMapping(value = "/admin/GestionEnseignant")

@@ -79,6 +79,12 @@ public class Departement {
 	public void setResponsable(Enseignant responsable) {
 		Responsable = responsable;
 	}
+
+	@Override
+	public String toString() {
+		return "Departement [idDepartement=" + idDepartement + ", nomDepartement=" + nomDepartement + ", college="
+				+ college + ", Responsable=" + Responsable + "]";
+	}
 	
 	
 	

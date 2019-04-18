@@ -20,10 +20,10 @@
 <form:form modelAttribute="departement" action="/">
 College: <form:select path="Departement.idDepartement" items="${departements}" itemValue="idDepartement" itemLabel="nomDepartement"></form:select> <br>
 Calculer la moyenne générale du département : <br>
-<output type="text" value="${ }"></output> <br>
+<output type="text" value="${}"></output> <br>
 
 <button type="button" class="btn">Valider</button>
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/>" >Se déconnecter </a></button>
+<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i>Se déconnecter </a></button>
 
 
 </form:form>
