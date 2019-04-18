@@ -18,6 +18,7 @@ crossorigin='anonymous'>
 <title>Insert title here</title>
 </head>
 <body>
+<table>
 
 <form:form modelAttribute="College" action="/collegeWeb/admin/home">
 
@@ -27,17 +28,15 @@ crossorigin='anonymous'>
 
 <button style='font-size:24px'><a href="<c:url value="/admin/GestionEtudiant" > gestion étudiants</a> <i class='fas fa-graduation-cap'></i></button><br>
 
-
 <button style='font-size:24px'><a href="<c:url value="/admin/GestionEnseignant"/>gestion enseignants</a> <i class='fas fa-chalkboard-teacher'></i></button><br>
 
 <button style='font-size:24px'><a href="<c:url value="/admin/GestionDepartement"/>gestion départements</a> <i class='fas fa-shapes'></i></button><br>
 
 <br>
 
+</table>
 
-
-
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > Se déconnecter </a></button>
+<button type="submit" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > Se déconnecter </a></button>
 
 
 </form:form>
