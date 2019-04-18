@@ -11,9 +11,11 @@
 
 <form:form modelAttribute="matiere" action="/">
 
-Matière: <form:select path="Matiere.idMatiere" items="${matieres}" itemValue="idMatiere" itemLabel="nom"></form:select> <br>
-Salle: <form:select path="Salle.idSalle" items="${salles}" itemValue="idSalle" itemLabel="Salle"></form:select> <br>
-Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="Enseignant"></form:select>
+nom: <form:input path="nom" type="text"/> <br>
+
+<%-- Matière: <form:select path="Matiere.idMatiere" items="${matieres}" itemValue="idMatiere" itemLabel="nom"></form:select> <br> --%>
+Salle: <form:select path="salle.idSalle" items="${salles}" itemValue="idSalle" itemLabel="Salle"></form:select> <br>
+<%-- Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="Enseignant"></form:select> --%>
 
 <button type="button" class="btn"> Valider </button>
 

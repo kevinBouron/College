@@ -16,6 +16,7 @@ public class Salle {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idSalle;
+	private int nom;
 	
 	private int nbrPlace;
 	
@@ -65,6 +66,14 @@ public class Salle {
 
 	public void setMatieres(List<Matiere> matieres) {
 		this.matieres = matieres;
+	}
+
+	public int getNom() {
+		return nom;
+	}
+
+	public void setNom(int nom) {
+		this.nom = nom;
 	}
 	
 	

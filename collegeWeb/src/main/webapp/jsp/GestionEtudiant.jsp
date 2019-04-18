@@ -8,7 +8,7 @@
 <title>Insert title here</title>
 </head>
 <body>
-<form:form modelAttribute="etudiant" action="/collegeWeb/">
+<form:form modelAttribute="etudiant" action="/collegeWeb/admin/addEtudiant">
 
 nom: <form:input path="nom" type="text"/> <br>
 prenom: <form:input path="prenom" type="text"/> <br>

@@ -3,6 +3,7 @@ package org.collegeServeur.entities;
 import java.util.List;
 
 import javax.persistence.Entity;
+import javax.persistence.FetchType;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
@@ -14,9 +15,10 @@ public class College {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idCollege;
+	private int nom;
 	private String siteInternet;
 	
-	@OneToMany(mappedBy="college")
+	@OneToMany(mappedBy="college",fetch=FetchType.EAGER)
 	List<Departement> departements;
 
 	
@@ -62,6 +64,16 @@ public class College {
 	public String toString() {
 		return "College [idCollege=" + idCollege + ", siteInternet=" + siteInternet + ", departements=" + departements
 				+ "]";
+	}
+
+
+	public int getNom() {
+		return nom;
+	}
+
+
+	public void setNom(int nom) {
+		this.nom = nom;
 	}
 	
 	

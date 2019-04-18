@@ -9,14 +9,14 @@
 </head>
 <body>
 
-<form:form modelAttribute="Enseignant" action="/collegeWeb/">
+<form:form modelAttribute="enseignant" action="/collegeWeb/admin/addEnseignant">
 
  
-Département: <form:select path="Departement.idDepartement" items="${departements}"
+Département: <form:select path="departement.idDepartement" items="${departements}"
 itemValue="idDepartement" itemLabel="nomDepartement"></form:select>
  <br>
  
-Matière: <form:select path="Matiere.idMatiere" items="${matieres}"
+Matière: <form:select path="matiere.idMatiere" items="${matieres}"
 itemValue="idMatiere" itemLabel="nom"></form:select>
  <br>
 
