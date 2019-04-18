@@ -9,6 +9,9 @@
 </head>
 <body>
 
+<h1>Gestion des enseignants</h1>
+
+
 <form:form modelAttribute="enseignant" action="/collegeWeb/admin/addEnseignant">
 
 

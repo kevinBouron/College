@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
     <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -23,7 +24,7 @@ Note: <form:input path="note" type="text"/> <br>
 <form:button type="submit" value="valider" >ok</form:button>
 </form:form>
 
-<a href="<c:url value="/j_spring_security_logout"/ > Se déconnecter </a>
+
 
 <table>
 		<thead>

@@ -15,8 +15,13 @@ Etudiants: <form:select path="idPersonne" items="${etudiants}"
 itemValue="idPersonne" itemLabel="Etudiant"></form:select>
  <br>
 
-<form:button type="submit" value="valider" >ok</form:button>
+<button type="button" class="btn"> Valider </button>
+
 </form:form>
 <output>${MoyenneG}</output>
 </body>
+
+
+
+<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i> Se déconnecter </a></button>
 </html>

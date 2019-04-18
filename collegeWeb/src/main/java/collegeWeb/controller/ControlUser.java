@@ -39,9 +39,9 @@ public class ControlUser {
 		List<Noter> notes=serviceNoter.display();
 		List<Etudiant> etudiants=serviceEtudiant.display();
 		List<Matiere> matieres=serviceMatiere.display();
-		view.addObject("ListeNotes",notes);
-		view.addObject("ListeEtuds",etudiants);
-		view.addObject("ListeMats",matieres);
+		view.addObject("notes",notes);
+		view.addObject("etudiants",etudiants);
+		view.addObject("matieres",matieres);
 		return view;
 }
 
