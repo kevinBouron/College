@@ -2,6 +2,7 @@ package org.collegeServeur.dao;
 
 import java.util.List;
 
+import org.collegeServeur.entities.Matiere;
 import org.collegeServeur.entities.Salle;
 import org.hibernate.SessionFactory;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -34,6 +35,11 @@ public class DAOSalle implements IDAOSalle{
 	public List<Salle> display() {
 
 		return sessionFactory.getCurrentSession().createQuery("from Salle s").list();
+	}
+
+	public Salle getById(int id) {
+		// TODO Auto-generated method stub
+		return (Salle) sessionFactory.getCurrentSession().get(Salle.class, id);
 	}
 
 
