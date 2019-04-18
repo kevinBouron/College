@@ -11,6 +11,12 @@
 
 <form:form modelAttribute="enseignant" action="/collegeWeb/admin/addEnseignant">
 
+
+nom: <form:input path="nom" type="text"/> <br>
+prenom: <form:input path="prenom" type="text"/> <br>
+mail: <form:input path="mail" type="text"/> <br>
+tel: <form:input path="tel" type="text"/> <br>
+Date de prise de fonction: <form:input path="datePriseFonction" type="text"/> <br>
  
 Département: <form:select path="departement.idDepartement" items="${departements}"
 itemValue="idDepartement" itemLabel="nomDepartement"></form:select>
@@ -19,6 +25,7 @@ itemValue="idDepartement" itemLabel="nomDepartement"></form:select>
 Matière: <form:select path="matiere.idMatiere" items="${matieres}"
 itemValue="idMatiere" itemLabel="nom"></form:select>
  <br>
+
 
 
 <form:button type="submit" value="valider" >valider</form:button>
