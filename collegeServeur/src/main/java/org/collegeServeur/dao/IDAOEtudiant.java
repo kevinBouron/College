@@ -14,4 +14,5 @@ public interface IDAOEtudiant extends ICRUD<Etudiant> {
 	public double getMoyenneGenerale(int idEtudiant);
 	public List<Matiere> getMatieresSansNote(int idEtudiant);
 
+
 }
