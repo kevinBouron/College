@@ -16,7 +16,7 @@ public class Salle {
 	@Id
 	@GeneratedValue(strategy=GenerationType.IDENTITY)
 	private int idSalle;
-	private int nom;
+	private String nom;
 	
 	private int nbrPlace;
 	
@@ -39,9 +39,11 @@ public class Salle {
 		
 	}
 
+
+
 	@Override
 	public String toString() {
-		return "Salle [nbrPlace=" + nbrPlace + ", matieres=" + matieres + "]";
+		return "Salle [idSalle=" + idSalle + ", nom=" + nom + ", nbrPlace=" + nbrPlace + "]";
 	}
 
 	public int getIdSalle() {
@@ -68,13 +70,15 @@ public class Salle {
 		this.matieres = matieres;
 	}
 
-	public int getNom() {
+	public String getNom() {
 		return nom;
 	}
 
-	public void setNom(int nom) {
+	public void setNom(String nom) {
 		this.nom = nom;
 	}
+
+
 	
 	
 	

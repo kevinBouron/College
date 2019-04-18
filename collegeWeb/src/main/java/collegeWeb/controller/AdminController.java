@@ -222,7 +222,7 @@ public class AdminController {
 	
 	@RequestMapping("/admin/editSalle")
 	public ModelAndView modifierSalle(@RequestParam int id) {
-		ModelAndView view=new ModelAndView("gestionEnseignant");
+		ModelAndView view=new ModelAndView("gestionSalle");
 		Salle salle= ServiceSal.getById(id);
 		List<Salle> salles = ServiceSal.display();
 		view.addObject("salles",salles);
@@ -233,7 +233,7 @@ public class AdminController {
 	@RequestMapping("/admin/suppSalle")
 	public ModelAndView supprimerSalle(@RequestParam int id){
 		
-		ModelAndView view=new ModelAndView("gestionEnseignant");
+		ModelAndView view=new ModelAndView("gestionSalle");
 		Salle salle= ServiceSal.getById(id);
 		System.out.println(salle);
 		ServiceSal.delete(salle);

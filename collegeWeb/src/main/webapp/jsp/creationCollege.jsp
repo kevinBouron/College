@@ -43,7 +43,7 @@ Site internet: <form:input path="siteInternet" type="text"/> <br>
            
            <td width="60" align="center">${c.siteInternet}</td>
            
-           <td width="60" align="left"><a href="editCol?id=${d.idCollege}"><i class="fas fa-pen"></i>   </a><a href="suppCol?id=${d.idCollege}"><i class="far fa-trash-alt"></i></a></td>
+           <td width="60" align="left"><a href="editCol?id=${c.idCollege}"><i class="fas fa-pen"></i>   </a><a href="suppCol?id=${c.idCollege}"><i class="far fa-trash-alt"></i></a></td>
            
          </tr>
     	 </c:forEach> 
