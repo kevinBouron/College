@@ -54,7 +54,7 @@
          </tr>
        </thead>
          <tbody>
-         <c:forEach items="${enseignants}" var="p">
+         <c:forEach items="${etudiants}" var="p">
          <tr>
          
            <td width="60" align="center">${p.nom}</td>
