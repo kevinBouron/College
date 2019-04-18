@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+        <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+            <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -10,11 +12,11 @@
 
 Enregistrement d'un collège:
 
-<form:form modelAttribute="departement" action="/collegeWeb/admin/adddCollege">
-Nom du College: <form:input path="nomDepartement" type="text"/> <br>
+<form:form modelAttribute="college" action="/collegeWeb/admin/addCollege">
+Nom du College: <form:input path="nom" type="text"/> <br>
 Site internet: <form:input path="siteInternet" type="text"/> <br>
 
-<button type="button" class="btn"> Valider </button>
+<button type="submit" class="btn"> Valider </button>
 </form:form>
 
 
@@ -39,6 +41,6 @@ Site internet: <form:input path="siteInternet" type="text"/> <br>
     
        </tbody>
     </table>
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i> Se déconnecter </a></button>
+
 </body>
 </html>

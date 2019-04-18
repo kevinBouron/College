@@ -21,9 +21,9 @@
 
 Nom du département: <form:input path="nomDepartement" type="text"/> <br>
 College: <form:select path="college.idCollege" items="${colleges}" itemValue="idCollege" itemLabel="idCollege"></form:select> <br>
-Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="nom"></form:select>
+Enseignant : <form:select path="responsable.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="nom"></form:select>
 <br>
-<button type="button" class="btn"> Valider </button>
+<button type="submit" class="btn"> Valider </button>
 
 </form:form>
 <br>
@@ -37,21 +37,20 @@ Enseignant : <form:select path="Responsable.idPersonne" items="${enseignants}" i
          </tr>
        </thead>
          <tbody>
-         
-         <tr>
          <c:forEach items="${departements}" var="d">
+         <tr>
+         
            <td width="60" align="center">${d.nomDepartement}</td>
 
            <td width="60" align="center">${d.responsable}</td>
            
            <td width="60" align="left"><a href="editDep?id=${d.idDepartement}"><i class="fas fa-pen"></i>   </a><a href="suppDep?id=${d.idDepartement}"><i class="far fa-trash-alt"></i></a></td>
 
-           <td width="60" align="center">${d.responsable}</td>
-           <td width="60" align="center"><a href=""><i class="fas fa-pen"></i>   </a><a href=""><i class="far fa-trash-alt"></i></a></td>
+          
 
-            </c:forEach>
+          
          </tr>
-     
+       </c:forEach>
        </tbody>
     </table>
 
