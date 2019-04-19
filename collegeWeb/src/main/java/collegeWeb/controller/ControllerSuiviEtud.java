@@ -8,6 +8,7 @@ import org.collegeServeur.entities.Etudiant;
 import org.collegeServeur.entities.Matiere;
 import org.collegeServeur.entities.Noter;
 import org.collegeServeur.service.IServiceEtudiant;
+import org.collegeServeur.service.IServiceMatiere;
 import org.collegeServeur.service.IServiceNoter;
 import org.collegeServeur.service.ServiceNoter;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -25,6 +26,11 @@ public class ControllerSuiviEtud {
 	
 	@Autowired
 	IServiceNoter serviceNot;
+	
+	@Autowired
+	IServiceMatiere serviceMat;
+	
+	
 
 	@RequestMapping("/user/redirectEtud")
 	public ModelAndView infosEtudiant() {
@@ -39,17 +45,33 @@ public class ControllerSuiviEtud {
 	@RequestMapping(value ="/user/moyenneG")
 	public ModelAndView moyenneG(@ModelAttribute("etudiant")Etudiant etudiant) {
 		double etud = serviceEtu.getMoyenneGenerale(etudiant.getIdPersonne());
+		
 		ModelAndView view = new ModelAndView("SuivitEtud");
 		
 		List<Noter> notes = serviceNot.display();
 		
 		view.addObject("notes",notes);
 		view.addObject("note",etud);
+		
 		view.addObject("etudiant",new Etudiant());
 		return view ;
 	}
 	
 	
+	@RequestMapping(value ="/user")
+	public ModelAndView matiereNull(@ModelAttribute("etudiant")Etudiant etudiant) {
+		List<Matiere> mats = serviceEtu.getMatieresSansNote(etudiant.getIdPersonne());
+		
+		ModelAndView view = new ModelAndView("SuivitEtud");
+		
+		
+		
+		
+		
+		view.addObject("matiere",mats);
+		view.addObject("etudiant",new Etudiant());
+		return view ;
+	}
 	
 	
 	

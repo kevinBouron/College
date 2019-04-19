@@ -33,7 +33,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#">										</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a href="<c:url value="/j_spring_security_logout" class="nav-link" />"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -42,11 +42,13 @@ crossorigin='anonymous'>
 
 
 
+
 <form:form modelAttribute="etudiant" action="/collegeWeb/user/moyenneG">
 
 
+
  Etudiants: <form:select path="idPersonne" items="${etudiants}"
-itemValue="idPersonne" itemLabel="nom"> 
+itemValue="idPersonne" itemLabel="nom" > 
  </form:select> 
  <br>
 
@@ -55,8 +57,11 @@ itemValue="idPersonne" itemLabel="nom">
 </form:form>
 <br>
 
-Moyenne générale: <output>${note}</output>
 
+<br>
+Moyenne générale: <output>${note}</output>
+<br>
+Matière sans notes: <output>${matieres}</output>
 </body>
 
 

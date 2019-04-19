@@ -39,11 +39,7 @@ public class AdminController {
 	@Autowired
 	private IServiceSalle ServiceSal;
 	
-	@RequestMapping(value = "/login")
-	public String Authentif() {
-		return "Authentification";
-	}
-
+	
 	@RequestMapping(value = "/admin/home")
 	public String adminHome() {
 		return "GestionCollege";
