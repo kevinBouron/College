@@ -49,22 +49,22 @@ crossorigin='anonymous'>
 
 <form:input path="idPersonne" type="hidden" />
 
- <form:input path="nom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="nom"></form:input>
+ nom:<form:input path="nom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="nom"></form:input>
  <br>
   <br>
-  <form:input path="prenom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="prenom"></form:input>
+  prénom :<form:input path="prenom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="prenom"></form:input>
   <br>
    <br>
-   <form:input path="mail" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="mail"></form:input>
+  mail:<form:input path="mail" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="mail"></form:input>
   <br>
    <br>
-   <form:input path="tel" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="tel"></form:input>
+  	numero de telephone: <form:input path="tel" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="tel"></form:input>
   <br>
    <br>
-   <form:input path="datePriseFonction" style="width: 600px" type="text" class="form-control form-control-lg" placeholder="Date de prise de fonction (AAAA/MM/JJ) "></form:input>
+   date de Prise de Fonction (format :AAAA/MM/JJ):<form:input path="datePriseFonction" style="width: 600px" type="text" class="form-control form-control-lg" placeholder="Date de prise de fonction (AAAA/MM/JJ) "></form:input>
     <br>
    <br>
-   <form:input path="indice" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="indice"></form:input>
+    indice : <form:input path="indice" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="indice"></form:input>
  <br>
  
  
