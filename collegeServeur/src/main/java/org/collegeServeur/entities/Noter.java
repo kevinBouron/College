@@ -36,11 +36,12 @@ public class Noter implements Serializable{
 		
 	}
 
+
 	public Float getNote() {
 		return note;
 	}
 
-	public void setNote(float note) {
+	public void setNote(Float note) {
 		this.note = note;
 	}
 

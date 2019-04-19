@@ -40,7 +40,7 @@ crossorigin='anonymous'>
 
 
 
-<form:form modelAttribute="noter" action="/CollegeWeb/user/addNote">
+<form:form modelAttribute="noter" action="/collegeWeb/user/addNote">
 <br>
 Etudiant: <form:select path="etudiant.idPersonne" items="${etudiants}"
 itemValue="idPersonne" itemLabel="nom"></form:select>
@@ -73,7 +73,7 @@ Note: <form:input path="note" type="text"/> <br>
 					<td>${note.idPersonne}</td>
 					<td>${note.note}</td>
 					
-					<td><a href="edit?id=${note.idPersonne}">modifier</a></td>
+<%-- 					 <td width="60" align="left"><a href="editNote?id=${note.}"><i class="fas fa-pen"></i>   </a><a href="suppNote?id=${note}"><i class="far fa-trash-alt"></i></a></td> --%>
 					
 				</tr>
 			</c:forEach>

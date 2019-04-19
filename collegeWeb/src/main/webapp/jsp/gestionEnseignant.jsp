@@ -55,8 +55,10 @@
    <form:input path="tel" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="tel"></form:input>
   <br>
    <br>
-   <form:input path="datePriseFonction" style="width: 600px" type="text" class="form-control form-control-lg" placeholder="Date de prise de fonction (..../../..) "></form:input>
-  
+   <form:input path="datePriseFonction" style="width: 600px" type="text" class="form-control form-control-lg" placeholder="Date de prise de fonction (AAAA/MM/JJ) "></form:input>
+    <br>
+   <br>
+   <form:input path="indice" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="indice"></form:input>
  <br>
  
  
@@ -85,7 +87,7 @@ itemValue="idMatiere" itemLabel="nom"></form:select>
             <th width="60" align="center">Mail </th>
            <th width="60" align="center">Tel</th>
            <th width="60" align="center">Date de prise en fonction</th>
-           
+            <th width="60" align="center">indice</th>
            
            <th width="60" align="center">Edit/Delete</th>
          </tr>
@@ -103,6 +105,8 @@ itemValue="idMatiere" itemLabel="nom"></form:select>
            <td width="60" align="center">${p.tel}</td>
            
            <td width="60" align="center">${p.datePriseFonction}</td>
+           
+           <td width="60" align="center">${p.indice}</td>
            
            <td width="60" align="left"><a href="editEns?id=${p.idPersonne}"><i class="fas fa-pen"></i>   </a><a href="suppEns?id=${p.idPersonne}"><i class="far fa-trash-alt"></i></a></td>
 
