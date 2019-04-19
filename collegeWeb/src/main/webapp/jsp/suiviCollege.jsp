@@ -15,10 +15,13 @@
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' 
 crossorigin='anonymous'>
 
-<title>Suivi collège</title>
+<title>Suivi Collège</title>
 </head>
 <body>
 
+
+<form:form modelAttribute="" action="/">
+=======
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -47,18 +50,20 @@ College: <form:select path="Departement.idDepartement" items="${departements}" i
 Calculer la moyenne générale du département : <br>
 <output type="text" value="${}"></output> <br>
 
-<button type="button" class="btn">Valider</button>
+<button type="submit" class="btn">Valider</button>
 </form:form>
 
 
 Afficher moyenne d'une matière:
-<form:form modelAttribute="note" action="/">
-Matière: <form:select path="Noter.idMatiere" items="${departements}" itemValue="idDepartement" itemLabel="nomDepartement"></form:select> <br>
-<output type="text" value="${}"></output> <br>
+<form:form modelAttribute="moyenne" action="/collegeWeb/GetMoyMat">
+Matière: <form:select path="idMatiere" items="${matieres}" itemValue="idMatiere" itemLabel="nom"></form:select> <br>
+<output type="text" value="${moyenne}"></output> <br>
+
+<button type="submit" class="btn">Valider</button>
+</form:form>
 
 
 
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i>Se déconnecter </a></button>
 
 
 
