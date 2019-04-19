@@ -115,7 +115,7 @@ itemValue="idMatiere" itemLabel="nom"></form:select>
            
            <td width="60" >${p.indice}</td>
            
-           <td width="60" align="left"><a href="editEns?id=${p.idPersonne}"><i class="fas fa-pen"></i>   </a><a href="suppEns?id=${p.idPersonne}"></a></td>
+           <td width="60" align="left"><a href="editEns?id=${p.idPersonne}"><i class="fas fa-pen"></i>   </a><a href="suppEns?id=${p.idPersonne}"><i class="far fa-trash-alt"></i></a></td>
 
           
 

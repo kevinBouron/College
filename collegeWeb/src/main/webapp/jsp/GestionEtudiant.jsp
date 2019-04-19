@@ -67,7 +67,7 @@ Téléphone: <form:input path="tel" type="text" style="width: 600px"  class="form-
 
 <form:button type="submit" value="valider" >valider</form:button>
 
-<table class="table" style="width: 600px">
+<table class="table" style="width: 100%">
  <thead>
          <tr>
            <th width="60" align="center">Nom Etudiant </th>
@@ -84,13 +84,13 @@ Téléphone: <form:input path="tel" type="text" style="width: 600px"  class="form-
          <c:forEach items="${etudiants}" var="p">
          <tr>
          
-           <td width="60" align="center">${p.nom}</td>
+           <td width="60">${p.nom}</td>
 
-           <td width="60" align="center">${p.prenom}</td>
+           <td width="60">${p.prenom}</td>
            
-            <td width="60" align="center">${p.mail}</td>
+            <td width="60" >${p.mail}</td>
 
-           <td width="60" align="center">${p.tel}</td>
+           <td width="60">${p.tel}</td>
            
            <td width="60" align="center">${p.anneEntree}</td>
            
