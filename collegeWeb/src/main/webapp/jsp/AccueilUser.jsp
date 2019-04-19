@@ -33,7 +33,7 @@ crossorigin='anonymous'>
       </li>
      
       <li class="nav-item" >
-        <a class="nav-link" href="/j_spring_security_logout"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a href="<c:url value="/j_spring_security_logout"/>" class="nav-link" > <h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
