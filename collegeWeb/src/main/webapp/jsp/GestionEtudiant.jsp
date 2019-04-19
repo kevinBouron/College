@@ -41,7 +41,7 @@ crossorigin='anonymous'>
 </nav>
 
 
-
+  
 
 
 <form:form modelAttribute="etudiant" action="/collegeWeb/admin/addEtudiant">
