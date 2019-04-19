@@ -1,8 +1,13 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+<<<<<<< HEAD
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
+=======
     <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' 
 crossorigin='anonymous'>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+>>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
 <!DOCTYPE html>
 <html>
 <head>
@@ -11,6 +16,9 @@ crossorigin='anonymous'>
 </head>
 <body>
 
+<<<<<<< HEAD
+<form:form modelAttribute="etudiant" action="/collegeWeb/user/moyenneG">
+=======
 <nav class="navbar navbar-expand-lg navbar-light bg-light ">
   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
     <span class="navbar-toggler-icon"></span>
@@ -34,19 +42,24 @@ crossorigin='anonymous'>
 
 
 <form:form modelAttribute="etudiant" action="/collegeWeb/">
+>>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
 
 
-Etudiants: <form:select path="idPersonne" items="${etudiants}"
-itemValue="idPersonne" itemLabel="Etudiant"></form:select>
+ Etudiants: <form:select path="idPersonne" items="${etudiants}"
+itemValue="idPersonne" itemLabel="nom"> 
+ </form:select> 
  <br>
 
-<button type="button" class="btn"> Valider </button>
+<button type="submit" class="btn"> Valider </button>
 
 </form:form>
-<output>${MoyenneG}</output>
+<br>
+
+Moyenne générale: <output>${note}</output>
+
 </body>
 
 
 
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i> Se déconnecter </a></button>
+
 </html>
