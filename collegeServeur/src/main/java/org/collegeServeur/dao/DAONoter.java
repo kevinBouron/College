@@ -11,18 +11,37 @@ import org.springframework.stereotype.Repository;
 
 @Repository("daoNoter")
 public class DAONoter implements IDAONoter {
-	
+
 	@Autowired
 	private SessionFactory sessionFactory;
 
 	public void create(Noter t) {
 		// TODO Auto-generated method stub
-		sessionFactory.getCurrentSession().merge(t);
+		List<Noter> notes =display();
+		Boolean test=true;
+		for(Noter n : notes) {
+			if(t.getEtudiant().getIdPersonne()== n.getEtudiant().getIdPersonne() && t.getMatiere().getIdMatiere()== n.getMatiere().getIdMatiere()) {
+				update(t);
+				test=false;
+			}
+		}
+		if(test=true) {
+		sessionFactory.getCurrentSession().persist(t);
+		}
 	}
 
 	public void update(Noter t) {
-		// TODO Auto-generated method stub
-		sessionFactory.getCurrentSession().update(t);
+		List<Noter> notes =display();
+		
+		for(Noter n : notes) {
+			if(t.getEtudiant().getIdPersonne()== n.getEtudiant().getIdPersonne() && t.getMatiere().getIdMatiere()== n.getMatiere().getIdMatiere()) {
+				sessionFactory.getCurrentSession().delete(n);
+				sessionFactory.getCurrentSession().persist(t);
+				
+			}
+		}
+
+		
 	}
 
 	public void delete(Noter t) {
@@ -57,11 +76,24 @@ public class DAONoter implements IDAONoter {
 //		}
 //
 //		float moyenne = sommeNote / nbEtudiants;
-		
-		Query q=sessionFactory.getCurrentSession().createQuery(" select avg(note) from Noter n where n.matiere.idMatiere =:id group by n.matiere.idMatiere").setParameter("id", idMatiere);
+
+		Query q = sessionFactory.getCurrentSession()
+				.createQuery(
+						" select avg(note) from Noter n where n.matiere.idMatiere =:id group by n.matiere.idMatiere")
+				.setParameter("id", idMatiere);
 		return (Double) q.list().get(0);
 		// return moyenne;
 	}
 
+	public Noter getNote(int idMat, int idP) {
 
+		List<Noter> notes = sessionFactory.getCurrentSession()
+				.createQuery("select n from Noter n where n.matiere.idMatiere=:idm and n.etudiant.idPersonne=:idp")
+				.setParameter("idm", idMat).setParameter("idp", idP).list();
+		if (!notes.isEmpty()) {
+
+			return notes.get(0);
+		}
+		return null;
+	}
 }

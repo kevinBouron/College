@@ -44,6 +44,11 @@ public class ServiceNoter  implements IServiceNoter {
 		// TODO Auto-generated method stub
 		return dao.getMoyenneParMatiere(idMatiere);
 	}
+
+	public Noter getNote(int idMat, int idP) {
+		// TODO Auto-generated method stub
+		return dao.getNote(idMat, idP);
+	}
 	
 	
 }

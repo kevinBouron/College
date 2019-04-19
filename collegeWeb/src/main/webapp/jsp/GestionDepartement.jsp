@@ -92,12 +92,8 @@ Enseignant : <form:select path="responsable.idPersonne"  style="width: 482px"
 					<td width="60" >${d.responsable.idPersonne}</td>
 					<td width="60" >${d.college.nom}</td>
 
-					<td width="60" align="left"><a
-						href="editDep?idDep=${d.idDepartement}"<i class="fas fa-pen"></i> </a>    <a
-						href="suppDep?id=${d.idDepartement}">   <i class="far fa-trash-alt"></i></a></td>
-
-
-
+					<td width="60" align="left"><a	href="editDep?idDep=${d.idDepartement}"><i class="fas fa-pen"></i> </a>    
+						<a	href="suppDep?id=${d.idDepartement}">   <i class="far fa-trash-alt"></i></a></td>
 
 				</tr>
 			</c:forEach>

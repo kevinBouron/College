@@ -28,7 +28,7 @@ public class App
 //        Etudiant etu = new Etudiant("kevin", "bouron", "@", 06, 2019);
 //        serviceE.create(etu);
     	
-//    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
+    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
 //    	IServiceCollege serviceC=(IServiceCollege) ctx.getBean("serviceCollege");
 //
 //    	College c = new College("@", null);
@@ -39,11 +39,22 @@ public class App
 //    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
 
 
-//      	IServiceNoter serviceN = (IServiceNoter) ctx.getBean("serviceNoter");
-//      	IServiceMatiere serviceM = (IServiceMatiere) ctx.getBean("serviceMatiere");
-//    	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
+      	IServiceNoter serviceN = (IServiceNoter) ctx.getBean("serviceNoter");
+      	IServiceMatiere serviceM = (IServiceMatiere) ctx.getBean("serviceMatiere");
+    	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
 ////    	Etudiant etu = new Etudiant("Bloup","Bobby", null, 0, 0);
-//    	Noter note= new Noter();
+    	Noter note= new Noter();
+    	
+    	Matiere m=serviceM.getById(1);
+    	Etudiant e=serviceE.GetById(7);
+    	
+    	note.setEtudiant(e);
+    	note.setMatiere(m);
+    	
+    	note.setNote(16.0f);
+    	
+    	serviceN.create(note);
+    	
 //    	Matiere matiere = new Matiere();
 //    	
 ////    	serviceE.create(etu);

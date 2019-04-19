@@ -46,12 +46,14 @@ crossorigin='anonymous'>
 
 <form:form modelAttribute="noter" action="/collegeWeb/user/addNote">
 <br>
+<c:if test="${edit==0}">
 Etudiant: <form:select path="etudiant.idPersonne" items="${etudiants}"
-itemValue="idPersonne" itemLabel="nom"></form:select>
+itemValue="idPersonne" itemLabel="nom" ></form:select>
  <br>
 Matiere: <form:select path="matiere.idMatiere" items="${matieres}"
-itemValue="idMatiere" itemLabel="nom"></form:select>
+itemValue="idMatiere" itemLabel="nom" ></form:select>
 <br>
+</c:if>
 Note: <form:input path="note" type="text"/> <br>
 <br>
 
@@ -73,11 +75,12 @@ Note: <form:input path="note" type="text"/> <br>
 		<tbody>
 			<c:forEach items="${notes}" var="note">
 				<tr>
-					<td>${note.idMatiere}</td>
-					<td>${note.idPersonne}</td>
+					<td>${note.matiere.idMatiere}</td>
+					<td>${note.etudiant.idPersonne}</td>
 					<td>${note.note}</td>
 					
-					 <td width="60" align="left"><a href="editNote?id=${note}"><i class="fas fa-pen"></i>   </a><a href="suppNote?id=${note}"><i class="far fa-trash-alt"></i></a></td>
+					<td><a href="editNote?id=${note.matiere.idMatiere}&idp=${note.etudiant.idPersonne}">modifier</a></td>
+					<td><a href="suppNote?id=${note.etudiant.idPersonne}&idp=${note.matiere.idMatiere}">supprimer</a></td>
 					
 				</tr>
 			</c:forEach>
