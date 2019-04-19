@@ -11,7 +11,7 @@
 
 
 <context:component-scan
-		base-package="collegeWeb.controller" /> <!-- le package à indiquer est le package ou se trouve les controller -->
+		base-package="collegeWeb" /> <!-- le package à indiquer est le package ou se trouve les controller -->
 	<bean
 		class="org.springframework.web.servlet.view.InternalResourceViewResolver">
 		<property name="prefix" value="/jsp/"></property> <!-- suffix qui indique le dossier qui contient les pages jsp -->

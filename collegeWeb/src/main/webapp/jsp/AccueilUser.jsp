@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
      <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+     <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -33,7 +34,7 @@ crossorigin='anonymous'>
       </li>
      
       <li class="nav-item" >
-        <a href="<c:url value="/j_spring_security_logout"/>" class="nav-link" > <h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a href="<c:url value="/j_spring_security_logout"/>"  > <h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -44,12 +45,12 @@ crossorigin='anonymous'>
 
 <table width="50%" align="center">
 <tr>
-<td><button style='font-size:24px' ><a href="/collegeWeb/user/GestionNote" > Gestion des notes</a> <i class='far fa-building'></i></button></td>
+<td> <a href="<c:url value="/user/GestionNote"/>"  ><i class='far fa-building'></i><button style='font-size:24px' > Gestion des notes</button> </a> </td>
 	
 
-<td><button style='font-size:24px'><a href="/collegeWeb/user/suiviCollege">  suivi college </a><i class='far fa-folder-open'></i></button></td>
+<td><button style='font-size:24px'><a href="/user/suiviCollege">  suivi college </a><i class='far fa-folder-open'></i></button></td>
 
-<td><button style='font-size:24px'><a href="/collegeWeb/user/redirectEtud" > suivi étudiants</a> <i class='fas fa-graduation-cap'></i></button><td>
+<td><button style='font-size:24px'><a href="/user/redirectEtud" > suivi étudiants</a> <i class='fas fa-graduation-cap'></i></button><td>
 </tr>
 
 </table>

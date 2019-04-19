@@ -20,38 +20,38 @@ crossorigin='anonymous'>
 <body>
 
 
-<form:form modelAttribute="" action="/">
+<%-- <form:form modelAttribute="" action="/"> --%>
 
-<nav class="navbar navbar-expand-lg navbar-light bg-light ">
-  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation">
-    <span class="navbar-toggler-icon"></span>
-  </button>
-  <div class="collapse navbar-collapse" id="navbarTogglerDemo01">
-    <a class="navbar-brand" ><h1>Suivi collège</h1></a>
-    <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
-      <li class="nav-item active">
-        <a class="nav-link" href="/collegeWeb/user/accueil"><h2 style="color:grey"><i class="fas fa-home"></i>Accueil</h2> <span class="sr-only">(current)</span></a>
-      </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">										</a>
-      </li>
-      <li class="nav-item" >
-        <a href="<c:url value="/j_spring_security_logout"  />"><h2 style="color:grey"><a href="<c:url value="/j_spring_security_logout"/ ><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
-      </li>
-    </ul>
+<!-- <nav class="navbar navbar-expand-lg navbar-light bg-light "> -->
+<!--   <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarTogglerDemo01" aria-controls="navbarTogglerDemo01" aria-expanded="false" aria-label="Toggle navigation"> -->
+<!--     <span class="navbar-toggler-icon"></span> -->
+<!--   </button> -->
+<!--   <div class="collapse navbar-collapse" id="navbarTogglerDemo01"> -->
+<!--     <a class="navbar-brand" ><h1>Suivi collège</h1></a> -->
+<!--     <ul class="navbar-nav mr-auto mt-2 mt-lg-0"> -->
+<!--       <li class="nav-item active"> -->
+<!--         <a class="nav-link" href="/collegeWeb/user/accueil"><h2 style="color:grey"><i class="fas fa-home"></i>Accueil</h2> <span class="sr-only">(current)</span></a> -->
+<!--       </li> -->
+<!--       <li class="nav-item"> -->
+<!--         <a class="nav-link" href="#">										</a> -->
+<!--       </li> -->
+<!--       <li class="nav-item" > -->
+<%--         <a href="<c:url value="/j_spring_security_logout"  />"><h2 style="color:grey"><a href="<c:url value="/j_spring_security_logout"/ ><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a> --%>
+<!--       </li> -->
+<!--     </ul> -->
    
-  </div>
-</nav>
+<!--   </div> -->
+<!-- </nav> -->
 
 
 
-<form:form modelAttribute="departement" action="/">
-College: <form:select path="Departement.idDepartement" items="${departements}" itemValue="idDepartement" itemLabel="nomDepartement"></form:select> <br>
-Calculer la moyenne générale du département : <br>
-<output type="text" value="${}"></output> <br>
+<%-- <form:form modelAttribute="departement" action="/"> --%>
+<%-- College: <form:select path="Departement.idDepartement" items="${departements}" itemValue="idDepartement" itemLabel="nomDepartement"></form:select> <br> --%>
+<!-- Calculer la moyenne générale du département : <br> -->
+<%-- <output type="text" value="${}"></output> <br> --%>
 
-<button type="submit" class="btn">Valider</button>
-</form:form>
+<!-- <button type="submit" class="btn">Valider</button> -->
+<%-- </form:form> --%>
 
 
 Afficher moyenne d'une matière:
