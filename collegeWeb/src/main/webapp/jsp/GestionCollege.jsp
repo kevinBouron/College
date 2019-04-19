@@ -32,7 +32,7 @@ crossorigin='anonymous'>
       </li>
       
       <li class="nav-item" >
-        <a href="<c:url value="/j_spring_security_logout" class="nav-link" />"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a href="<c:url value="/j_spring_security_logout"  />"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -42,8 +42,11 @@ crossorigin='anonymous'>
 
 
 
-<table align="center" style="width:100%; margin-left:350px">
-<tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionDepartement"/>Gestion des départements</a> <i class='fas fa-shapes'></i></button></td></tr>
+<table  style="width:100%; margin-left:350px">
+
+<tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionCollege"> Creation des colleges</a> <i class='far fa-folder-open'></i></button></td></tr>
+
+<tr><td><a href="/collegeWeb/admin/GestionDepartement"><button style='font-size:24px; width:50%'> <i class='fas fa-shapes'></i> Gestion des départements</button></a></td></tr>
 
 <tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionEnseignant"/>Gestion des enseignants</a> <i class='fas fa-chalkboard-teacher'></i></button></td></tr>
 

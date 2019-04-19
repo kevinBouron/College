@@ -85,9 +85,8 @@ public class DAONoter implements IDAONoter {
 		// return moyenne;
 	}
 
-<<<<<<< HEAD
 	public Noter getNote(int idMat, int idP) {
-=======
+
 	
 //	public String admissionEtud() {
 //		
@@ -104,7 +103,7 @@ public class DAONoter implements IDAONoter {
 //	}
 	
 
->>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
+
 
 		List<Noter> notes = sessionFactory.getCurrentSession()
 				.createQuery("select n from Noter n where n.matiere.idMatiere=:idm and n.etudiant.idPersonne=:idp")

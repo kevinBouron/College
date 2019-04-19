@@ -47,9 +47,9 @@ crossorigin='anonymous'>
 <td><button style='font-size:24px' ><a href="/collegeWeb/user/GestionNote" > Gestion des notes</a> <i class='far fa-building'></i></button></td>
 	
 
-<td><button style='font-size:24px'><a href="/collegWeb/admin/GestionMatiere">  Gestion Matière </a><i class='far fa-folder-open'></i></button></td>
+<td><button style='font-size:24px'><a href="/collegeWeb/user/suiviCollege">  suivi college </a><i class='far fa-folder-open'></i></button></td>
 
-<td><button style='font-size:24px'><a href="collegeWeb/admin/GestionEtudiant" > Gestion étudiants</a> <i class='fas fa-graduation-cap'></i></button><td>
+<td><button style='font-size:24px'><a href="/collegeWeb/user/redirectEtud" > suivi étudiants</a> <i class='fas fa-graduation-cap'></i></button><td>
 </tr>
 
 </table>

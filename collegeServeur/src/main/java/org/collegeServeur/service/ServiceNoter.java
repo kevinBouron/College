@@ -46,14 +46,14 @@ public class ServiceNoter  implements IServiceNoter {
 		return dao.getMoyenneParMatiere(idMatiere);
 	}
 
-<<<<<<< HEAD
+
 	public Noter getNote(int idMat, int idP) {
 		// TODO Auto-generated method stub
 		return dao.getNote(idMat, idP);
 	}
-=======
 
->>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
+
+
 	
 	
 }

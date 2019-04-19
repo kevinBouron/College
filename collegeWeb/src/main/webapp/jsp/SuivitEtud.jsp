@@ -33,7 +33,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#">										</a>
       </li>
       <li class="nav-item" >
-        <a href="<c:url value="/j_spring_security_logout" class="nav-link" />"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a href="<c:url value="/j_spring_security_logout"  />"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -59,7 +59,7 @@ itemValue="idPersonne" itemLabel="nom" >
 
 
 <br>
-Moyenne générale: <output>${note}</output>
+Moyenne générale: <output>${moyenneEtud}</output>
 <br>
 Matière sans notes: <output>${matieres}</output>
 </body>

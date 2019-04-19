@@ -97,7 +97,7 @@
 		
 		<security:form-login login-page="/login" default-target-url="/jsp/redirection.jsp" />
 
-		<security:logout  logout-success-url="/collegeWeb/login" /> 
+		<security:logout  logout-success-url="/login" /> 
 
 	</security:http>
 	

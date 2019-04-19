@@ -27,13 +27,11 @@ public class App
 //        ServiceEtudiant serviceE= new ServiceEtudiant();
 //        Etudiant etu = new Etudiant("kevin", "bouron", "@", 06, 2019);
 //        serviceE.create(etu);
-<<<<<<< HEAD
+
     	
-    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
-=======
 //    	
 //    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
->>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
+
 //    	IServiceCollege serviceC=(IServiceCollege) ctx.getBean("serviceCollege");
 //
 //    	College c = new College("@", null);
@@ -50,17 +48,17 @@ public class App
 //
 //
 
-<<<<<<< HEAD
+
       	IServiceNoter serviceN = (IServiceNoter) ctx.getBean("serviceNoter");
       	IServiceMatiere serviceM = (IServiceMatiere) ctx.getBean("serviceMatiere");
-=======
+
 //      	IServiceNoter serviceN = (IServiceNoter) ctx.getBean("serviceNoter");
 //      	IServiceMatiere serviceM = (IServiceMatiere) ctx.getBean("serviceMatiere");
 
->>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
+
     	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
 ////    	Etudiant etu = new Etudiant("Bloup","Bobby", null, 0, 0);
-<<<<<<< HEAD
+
     	Noter note= new Noter();
     	
     	Matiere m=serviceM.getById(1);
@@ -73,13 +71,13 @@ public class App
     	
     	serviceN.create(note);
     	
-=======
+
 
 //    	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
 //    	Etudiant etu = new Etudiant("Bloup","Bobby", null, 0, 0);
 
 //    	Noter note= new Noter();
->>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
+
 //    	Matiere matiere = new Matiere();
 //    	
 //    	serviceE.create(etu);

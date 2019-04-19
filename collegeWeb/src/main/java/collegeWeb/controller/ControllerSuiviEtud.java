@@ -44,29 +44,28 @@ public class ControllerSuiviEtud {
 	
 	@RequestMapping(value ="/user/moyenneG")
 	public ModelAndView moyenneG(@ModelAttribute("etudiant")Etudiant etudiant) {
-		double etud = serviceEtu.getMoyenneGenerale(etudiant.getIdPersonne());
+		double moyenneEtud = serviceEtu.getMoyenneGenerale(etudiant.getIdPersonne());
 		
 		ModelAndView view = new ModelAndView("SuivitEtud");
 		
-		List<Noter> notes = serviceNot.display();
+
+		view.addObject("moyenneEtud",moyenneEtud);
+		List<Etudiant> etudiants = serviceEtu.display();
+		view.addObject("etudiants",etudiants);
 		
-		view.addObject("notes",notes);
-		view.addObject("note",etud);
-		
+		List<Matiere> mats = serviceEtu.getMatieresSansNote(etudiant.getIdPersonne());
+		view.addObject("matiere",mats);
+		System.out.println(mats);
 		view.addObject("etudiant",new Etudiant());
 		return view ;
 	}
 	
 	
-	@RequestMapping(value ="/user")
+	@RequestMapping(value ="/user/")
 	public ModelAndView matiereNull(@ModelAttribute("etudiant")Etudiant etudiant) {
 		List<Matiere> mats = serviceEtu.getMatieresSansNote(etudiant.getIdPersonne());
 		
 		ModelAndView view = new ModelAndView("SuivitEtud");
-		
-		
-		
-		
 		
 		view.addObject("matiere",mats);
 		view.addObject("etudiant",new Etudiant());

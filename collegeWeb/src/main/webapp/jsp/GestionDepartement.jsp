@@ -7,19 +7,12 @@
 <head>
 <meta charset="ISO-8859-1">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link rel="stylesheet"
-	href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
-<link rel="stylesheet"
-	href="https://use.fontawesome.com/releases/v5.8.1/css/all.css"
-	integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf"
-	crossorigin="anonymous">
-<script
-	src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' 
-crossorigin='anonymous'>
-<script
-	src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
-	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+	<link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' >
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
 <title>Gestion Département</title>
 </head>
 <body>
@@ -39,7 +32,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#"></a>
       </li>
       <li class="nav-item" >
-        <a href="<c:url value="/j_spring_security_logout" class="nav-link" />"><h2 style="color:grey"> <i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a href="<c:url value="/j_spring_security_logout"  />"><h2 style="color:grey"> <i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -92,15 +85,15 @@ Enseignant : <form:select path="responsable.idPersonne"  style="width: 482px"
 					<td width="60" >${d.responsable.idPersonne}</td>
 					<td width="60" >${d.college.nom}</td>
 
-<<<<<<< HEAD
+
 					<td width="60" align="left"><a	href="editDep?idDep=${d.idDepartement}"><i class="fas fa-pen"></i> </a>    
 						<a	href="suppDep?id=${d.idDepartement}">   <i class="far fa-trash-alt"></i></a></td>
-=======
+
 					<td width="60" align="left"><a href="editDep?idDep=${d.idDepartement}" ><i class="fas fa-pen"></i> </a>    <a href="suppDep?id=${d.idDepartement}">  <i class="far fa-trash-alt"></i></a></td>
 
 
 
->>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
+
 
 				</tr>
 			</c:forEach>
