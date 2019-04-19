@@ -39,7 +39,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#"></a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey"> <i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/j_spring_security_logout"><h2 style="color:grey"> <i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -92,9 +92,7 @@ Enseignant : <form:select path="responsable.idPersonne"  style="width: 482px"
 					<td width="60" >${d.responsable.idPersonne}</td>
 					<td width="60" >${d.college.nom}</td>
 
-					<td width="60" align="left"><a
-						href="editDep?idDep=${d.idDepartement}"<i class="fas fa-pen"></i> </a>    <a
-						href="suppDep?id=${d.idDepartement}">   <i class="far fa-trash-alt"></i></a></td>
+					<td width="60" align="left"><a href="editDep?idDep=${d.idDepartement}" ><i class="fas fa-pen"></i> </a>    <a href="suppDep?id=${d.idDepartement}">  <i class="far fa-trash-alt"></i></a></td>
 
 
 

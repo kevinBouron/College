@@ -34,7 +34,7 @@ crossorigin='anonymous'>
       </li>
      
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/j_spring_security_logout"><h2 style="color:grey"><a ></a> ><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -44,7 +44,8 @@ crossorigin='anonymous'>
 <div >
 <form:form modelAttribute="role" action="/collegeWeb/addRole">
 
-Role: <form:input path="roleName" type="text"/> <br>
+Rôle: <form:input path="roleName" type="text" style="width: 200px" class="form-control form-control-lg" placeholder="ROLE_ADMIN ou ROLE_USER"></form:input>
+	<br>
 User: <form:select path="user.idUser" items="${users}"
 itemValue="idUser" itemLabel="userName"></form:select>
  <br>

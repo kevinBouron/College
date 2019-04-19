@@ -33,7 +33,7 @@ crossorigin='anonymous'>
       </li>
      
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/j_spring_security_logout"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -45,7 +45,7 @@ crossorigin='anonymous'>
 <form:form modelAttribute="admin" action="/collegeWeb/addAdmin">
 
 login: <form:input path="userName" type="text"/> <br>
-password: <form:input path="password" type="text"/> <br>
+password: <form:input path="password" type="password"/> <br>
 activer: <form:checkbox value="1" path="actived"/><br>
 <form:button type="submit" value="valider" >ok</form:button>
 </form:form>
