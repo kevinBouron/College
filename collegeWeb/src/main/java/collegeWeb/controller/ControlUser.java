@@ -20,74 +20,74 @@ import org.springframework.web.servlet.ModelAndView;
 @Controller
 public class ControlUser {
 
-	@Autowired
-	IServiceNoter serviceNoter;
-	@Autowired
-	IServiceEtudiant serviceEtudiant;
-	@Autowired
-	IServiceMatiere serviceMatiere;
-	
-	
-	@RequestMapping("/user/accueil")
-	public String AccueilUser() {
-		return "AccueilUser";
-		
-	}
-	
-	
-	@RequestMapping("/user/home")
-	public String userHome() {
-		return "GestionNote";
-	}
-	
-	@RequestMapping("/user/GestionNote")
-	public ModelAndView gestNote() {
-		ModelAndView view=new ModelAndView("GestionNote","noter",new Noter());
-		List<Noter> notes=serviceNoter.display();
-		List<Etudiant> etudiants=serviceEtudiant.display();
-		List<Matiere> matieres=serviceMatiere.display();
-		view.addObject("notes",notes);
-		view.addObject("etudiants",etudiants);
-		view.addObject("matieres",matieres);
-		return view;
-}
-
-	@RequestMapping("/user/addNote")
-	public ModelAndView ajout(@ModelAttribute("noter")Noter noter) {
-		serviceNoter.create(noter);
-		ModelAndView view=new ModelAndView();
-		List<Noter> notes=serviceNoter.display();
-		List<Etudiant> etudiants=serviceEtudiant.display();
-		List<Matiere> matieres=serviceMatiere.display();
-		view.addObject("ListeNotes",notes);
-		view.addObject("ListeEtuds",etudiants);
-		view.addObject("ListeMats",matieres);
-		return view;
-		
-	}
-	
-	
-	@RequestMapping("/user/editEtud")
-	public ModelAndView modifier(@RequestParam int id) {
-		ModelAndView view=new ModelAndView("GestionNote");
-		Etudiant e=serviceEtudiant.GetById(id);
-		List <Noter> notes=serviceNoter.display();
-		view.addObject("etudiant",e);
-	    view.addObject("ListeNotes",notes);
-		return view;
-		
-	}
-	
-
-	@RequestMapping("/redirectColl")
-	public ModelAndView infosCollege() {
-		
-		return new ModelAndView("SuiviCollege");
-		
-	}
-	@RequestMapping("/redirectEtud")
-	public ModelAndView infosEtudiant() {
-		
-		return new ModelAndView("SuivitEtud"); 
-	}	
+//	@Autowired
+//	IServiceNoter serviceNoter;
+//	@Autowired
+//	IServiceEtudiant serviceEtudiant;
+//	@Autowired
+//	IServiceMatiere serviceMatiere;
+//	
+//	
+//	@RequestMapping("/user/accueil")
+//	public String AccueilUser() {
+//		return "AccueilUser";
+//		
+//	}
+//	
+//	
+//	@RequestMapping("/user/home")
+//	public String userHome() {
+//		return "GestionNote";
+//	}
+//	
+//	@RequestMapping("/user/GestionNote")
+//	public ModelAndView gestNote() {
+//		ModelAndView view=new ModelAndView("GestionNote","noter",new Noter());
+//		List<Noter> notes=serviceNoter.display();
+//		List<Etudiant> etudiants=serviceEtudiant.display();
+//		List<Matiere> matieres=serviceMatiere.display();
+//		view.addObject("notes",notes);
+//		view.addObject("etudiants",etudiants);
+//		view.addObject("matieres",matieres);
+//		return view;
+//}
+//
+//	@RequestMapping("/user/addNote")
+//	public ModelAndView ajout(@ModelAttribute("noter")Noter noter) {
+//		serviceNoter.create(noter);
+//		ModelAndView view=new ModelAndView();
+//		List<Noter> notes=serviceNoter.display();
+//		List<Etudiant> etudiants=serviceEtudiant.display();
+//		List<Matiere> matieres=serviceMatiere.display();
+//		view.addObject("ListeNotes",notes);
+//		view.addObject("ListeEtuds",etudiants);
+//		view.addObject("ListeMats",matieres);
+//		return view;
+//		
+//	}
+//	
+//	
+//	@RequestMapping("/user/editEtud")
+//	public ModelAndView modifier(@RequestParam int id) {
+//		ModelAndView view=new ModelAndView("GestionNote");
+//		Etudiant e=serviceEtudiant.GetById(id);
+//		List <Noter> notes=serviceNoter.display();
+//		view.addObject("etudiant",e);
+//	    view.addObject("ListeNotes",notes);
+//		return view;
+//		
+//	}
+//	
+//
+//	@RequestMapping("/redirectColl")
+//	public ModelAndView infosCollege() {
+//		
+//		return new ModelAndView("SuiviCollege");
+//		
+//	}
+//	@RequestMapping("/redirectEtud")
+//	public ModelAndView infosEtudiant() {
+//		
+//		return new ModelAndView("SuivitEtud"); 
+//	}	
 }

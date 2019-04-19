@@ -1,5 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
+    <%@ taglib prefix="form" uri="http://www.springframework.org/tags/form"%>
+    <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c"%>
 <!DOCTYPE html>
 <html>
 <head>
@@ -8,20 +10,24 @@
 </head>
 <body>
 
-<form:form modelAttribute="etudiant" action="/collegeWeb/">
+<form:form modelAttribute="etudiant" action="/collegeWeb/user/moyenneG">
 
 
-Etudiants: <form:select path="idPersonne" items="${etudiants}"
-itemValue="idPersonne" itemLabel="Etudiant"></form:select>
+ Etudiants: <form:select path="idPersonne" items="${etudiants}"
+itemValue="idPersonne" itemLabel="nom"> 
+ </form:select> 
  <br>
 
-<button type="button" class="btn"> Valider </button>
+<button type="submit" class="btn"> Valider </button>
 
 </form:form>
-<output>${MoyenneG}</output>
+<br>
+
+Moyenne générale: <output>${note}</output>
+
 </body>
 
 
 
-<button type="button" class="btn"><a href="<c:url value="/j_spring_security_logout"/ > <i class="fas fa-sign-out-alt"></i> Se déconnecter </a></button>
+
 </html>
