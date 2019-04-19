@@ -34,7 +34,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#">										</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey">Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -45,36 +45,37 @@ crossorigin='anonymous'>
 
 <form:form modelAttribute="salle" action="/collegeWeb/admin/addSalles">
 <form:input path="idSalle" type="hidden" />
- nom: <form:input path="nom" type="text"/> <br>
+Nom de la salle: <form:input path="nom" type="text"/> <br>
 <%-- Matières: <form:select path="Matiere.idMatiere" items="${matieres}" --%>
 <%-- itemValue="idMatiere" itemLabel="nom"></form:select> --%>
-nombre de place: <form:input path="nbrPlace" type="text"/> <br>
+Nombre de places: <form:input path="nbrPlace" type="text"/> <br>
  <br>
  
- <form:button type="submit" value="valider" >valider</form:button>
+ <form:button type="submit" value="valider" >Valider</form:button>
 
-<a href="<c:url value="/j_spring_security_logout"/>" >logout</a>
+<br>
+<br>	
 
 
 
- <table class="table" style="width: 600px">
+ <table class="table" style="width: 100%">
  <thead>
          <tr>
-           <th width="60" align="center">Nom de la salle </th>
-           <th width="60" align="center">Nombre de place </th>
+           <th width="60">Nom de la salle </th>
+           <th width="60" >Nombre de place </th>
           
            
            
-           <th width="60" align="center">Edit/Delete</th>
+           <th width="60"> Modifier / Supprimer</th>
          </tr>
        </thead>
          <tbody>
          <c:forEach items="${salles}" var="s">
          <tr>
          
-           <td width="60" align="center">${s.nom}</td>
+           <td width="60" >${s.nom}</td>
 
-           <td width="60" align="center">${s.nbrPlace}</td>
+           <td width="60">${s.nbrPlace}</td>
            
       
            

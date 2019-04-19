@@ -51,7 +51,7 @@ public class ControllerNote {
 	@RequestMapping("/user/addNote")
 	public ModelAndView addNote(@ModelAttribute("noter")Noter noter) {
 		serviceNoter.create(noter);
-		System.out.println(noter.getMatiere());
+		System.out.println(noter);
 		ModelAndView view = new ModelAndView("GestionNote","noter",new Noter());
 		List<Noter> notes = serviceNoter.display();
 		view.addObject("notes",notes);

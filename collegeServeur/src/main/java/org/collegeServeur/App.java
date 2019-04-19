@@ -36,12 +36,12 @@ public class App
     	
   
 //    	
-//    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
+   	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
 
 
 //      	IServiceNoter serviceN = (IServiceNoter) ctx.getBean("serviceNoter");
 //      	IServiceMatiere serviceM = (IServiceMatiere) ctx.getBean("serviceMatiere");
-//    	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
+    	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
 ////    	Etudiant etu = new Etudiant("Bloup","Bobby", null, 0, 0);
 //    	Noter note= new Noter();
 //    	Matiere matiere = new Matiere();
@@ -64,6 +64,6 @@ public class App
 //    	
 //    	serviceN.create(note);
     	
-    	
+    System.out.println(serviceE.getMatieresSansNote(1));
     }
 }

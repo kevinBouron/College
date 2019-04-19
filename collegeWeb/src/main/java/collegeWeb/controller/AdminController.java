@@ -114,6 +114,8 @@ public class AdminController {
 		ModelAndView view = new ModelAndView("gestionEnseignant","enseignant",new Enseignant());
 		List<Departement> departements = serviceDep.display();
 		List<Matiere> matieres = ServiceMat.display();
+		List<Enseignant> enseignants = serviceEns.display();
+		view.addObject("enseignants",enseignants);
 		view.addObject("departements",departements);
 		view.addObject("matieres",matieres);
 		return view ;
@@ -125,6 +127,8 @@ public class AdminController {
 		ModelAndView view = new ModelAndView("gestionEnseignant","enseignant",new Enseignant());
 		List<Departement> departements = serviceDep.display();
 		List<Matiere> matieres = ServiceMat.display();
+		List<Enseignant> enseignants = serviceEns.display();
+		view.addObject("enseignants",enseignants);
 		view.addObject("departements",departements);
 		view.addObject("matieres",matieres);
 		return view ;
@@ -135,6 +139,8 @@ public class AdminController {
 		Enseignant ens = serviceEns.GetById(id);
 		List<Departement> departements = serviceDep.display();
 		List<Matiere> matieres = ServiceMat.display();
+		List<Enseignant> enseignants = serviceEns.display();
+		view.addObject("enseignants",enseignants);
 		view.addObject("departements",departements);
 		view.addObject("matieres",matieres);
 		view.addObject("enseignant",ens);  
@@ -150,6 +156,8 @@ public class AdminController {
 		serviceEns.delete(ens);
 		List<Departement> departements = serviceDep.display();
 		List<Matiere> matieres = ServiceMat.display();
+		List<Enseignant> enseignants = serviceEns.display();
+		view.addObject("enseignants",enseignants);
 		view.addObject("departements",departements);
 		view.addObject("matieres",matieres);
 		view.addObject("enseignant",new Enseignant()); 

@@ -36,10 +36,10 @@ crossorigin='anonymous'>
         <a class="nav-link" href="/collegeWeb/admin/home"><h2 style="color:grey"><i class="fas fa-home"></i>Accueil</h2> <span class="sr-only">(current)</span></a>
       </li>
       <li class="nav-item">
-        <a class="nav-link" href="#">										</a>
+        <a class="nav-link" href="#"></a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey">Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h2 style="color:grey"> <i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -50,24 +50,31 @@ crossorigin='anonymous'>
 
 
 	<br>
+	
+	
+<div style="width:100%">
+
 	<form:form modelAttribute="departement"
 		action="/collegeWeb/admin/adddDepartement">
 
 <form:input path="idDepartement" type="hidden" />
-Nom du département: <form:input path="nomDepartement" type="text" />
+Nom du département: <form:input path="nomDepartement" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="nom Département"></form:input>
 		<br>
-College: <form:select path="college.idCollege" items="${colleges}"
-			itemValue="idCollege" itemLabel="idCollege"></form:select>
 		<br>
-Enseignant : <form:select path="responsable.idPersonne"
+College: <form:select path="college.idCollege" style="width: 500px" items="${colleges}"
+itemValue="idCollege" itemLabel="idCollege"></form:select>
+		<br>
+		<br>
+Enseignant : <form:select path="responsable.idPersonne"  style="width: 482px"
 			items="${enseignants}" itemValue="idPersonne" itemLabel="nom"></form:select>
+		<br>
 		<br>
 		<button type="submit" class="btn">Valider</button>
 
 	</form:form>
 	<br>
 
-	<table class="table" style="width: 600px">
+	<table class="table" style="width: 100%">
 		<thead>
 			<tr>
 				<th width="60" align="center">Nom Département</th>
@@ -80,14 +87,14 @@ Enseignant : <form:select path="responsable.idPersonne"
 			<c:forEach items="${departements}" var="d">
 				<tr>
 
-					<td width="60" align="center">${d.nomDepartement}</td>
+					<td width="60" >${d.nomDepartement}</td>
 
-					<td width="60" align="center">${d.responsable.idPersonne}</td>
-					<td width="60" align="center">${d.college.nom}</td>
+					<td width="60" >${d.responsable.idPersonne}</td>
+					<td width="60" >${d.college.nom}</td>
 
 					<td width="60" align="left"><a
-						href="editDep?idDep=${d.idDepartement}"> edit </a><a
-						href="suppDep?id=${d.idDepartement}">delete</a></td>
+						href="editDep?idDep=${d.idDepartement}"<i class="fas fa-pen"></i> </a>    <a
+						href="suppDep?id=${d.idDepartement}">   <i class="far fa-trash-alt"></i></a></td>
 
 
 
@@ -99,7 +106,7 @@ Enseignant : <form:select path="responsable.idPersonne"
 
 	
 
-
+</div>
 
 
 </body>

@@ -57,7 +57,7 @@ public class DAOEtudiant implements IDAOEtudiant {
 		List<Noter> noters = sessionFactory.getCurrentSession().createQuery(" from Noter n").list();
 		List<Matiere> matieres=new ArrayList<Matiere>();
 		for(Noter n : noters) {
-			if(n.getEtudiant().getIdPersonne()==idEtudiant && n.getNote()==null) {
+			if(n.getEtudiant().getIdPersonne()==idEtudiant && n.getNote()==null ) {
 				
 				matieres.add(n.getMatiere());
 			}

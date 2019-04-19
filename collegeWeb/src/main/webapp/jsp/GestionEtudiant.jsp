@@ -33,7 +33,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#">										</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey">Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -47,19 +47,19 @@ crossorigin='anonymous'>
 <form:form modelAttribute="etudiant" action="/collegeWeb/admin/addEtudiant">
 <form:input path="idPersonne" type="hidden" />
 
-<form:input path="nom" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="nom"></form:input>
+Nom:<form:input path="nom" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="nom"></form:input>
  <br>
   <br>
-  <form:input path="prenom" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="prenom"></form:input>
+Prénom:   <form:input path="prenom" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="prenom"></form:input>
   <br>
    <br>
-   <form:input path="mail" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="mail"></form:input>
+ E-mail:  <form:input path="mail" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="mail"></form:input>
   <br>
    <br>
-   <form:input path="tel" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="tel"></form:input>
+Téléphone: <form:input path="tel" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="tel"></form:input>
   <br>
    <br>
-   <form:input path="anneEntree" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="Année entrée (..../../..) "></form:input>
+ Année d'entrée:   <form:input path="anneEntree" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="Année entrée (..../../..) "></form:input>
   
  <br>
 
@@ -67,7 +67,7 @@ crossorigin='anonymous'>
 
 <form:button type="submit" value="valider" >valider</form:button>
 
-<table class="table" style="width: 600px">
+<table class="table" style="width: 100%">
  <thead>
          <tr>
            <th width="60" align="center">Nom Etudiant </th>
@@ -84,13 +84,13 @@ crossorigin='anonymous'>
          <c:forEach items="${etudiants}" var="p">
          <tr>
          
-           <td width="60" align="center">${p.nom}</td>
+           <td width="60">${p.nom}</td>
 
-           <td width="60" align="center">${p.prenom}</td>
+           <td width="60">${p.prenom}</td>
            
-            <td width="60" align="center">${p.mail}</td>
+            <td width="60" >${p.mail}</td>
 
-           <td width="60" align="center">${p.tel}</td>
+           <td width="60">${p.tel}</td>
            
            <td width="60" align="center">${p.anneEntree}</td>
            

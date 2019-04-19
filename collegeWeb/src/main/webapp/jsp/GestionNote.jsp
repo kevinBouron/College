@@ -35,7 +35,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#">										</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey">Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -60,13 +60,13 @@ Note: <form:input path="note" type="text"/> <br>
 
 
 
-<table>
+<table style="width: 100%">
 		<thead>
 			<tr>
 				<th>Matière</th>
 				<th>Etudiant</th>
 				<th>Note</th>
-				<th>modifier</th>
+				<th>Modifier / Editer</th>
 			</tr>
 		</thead>
 
@@ -77,7 +77,7 @@ Note: <form:input path="note" type="text"/> <br>
 					<td>${note.idPersonne}</td>
 					<td>${note.note}</td>
 					
-<%-- 					 <td width="60" align="left"><a href="editNote?id=${note.}"><i class="fas fa-pen"></i>   </a><a href="suppNote?id=${note}"><i class="far fa-trash-alt"></i></a></td> --%>
+					 <td width="60" align="left"><a href="editNote?id=${note}"><i class="fas fa-pen"></i>   </a><a href="suppNote?id=${note}"><i class="far fa-trash-alt"></i></a></td>
 					
 				</tr>
 			</c:forEach>
