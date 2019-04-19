@@ -42,11 +42,13 @@ crossorigin='anonymous'>
 
 
 
+
 <form:form modelAttribute="etudiant" action="/collegeWeb/user/moyenneG">
 
 
+
  Etudiants: <form:select path="idPersonne" items="${etudiants}"
-itemValue="idPersonne" itemLabel="nom"> 
+itemValue="idPersonne" itemLabel="nom" > 
  </form:select> 
  <br>
 
@@ -55,8 +57,11 @@ itemValue="idPersonne" itemLabel="nom">
 </form:form>
 <br>
 
-Moyenne générale: <output>${note}</output>
 
+<br>
+Moyenne générale: <output>${note}</output>
+<br>
+Matière sans notes: <output>${matieres}</output>
 </body>
 
 

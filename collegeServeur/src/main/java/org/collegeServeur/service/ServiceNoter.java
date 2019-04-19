@@ -3,6 +3,7 @@ package org.collegeServeur.service;
 import java.util.List;
 
 import org.collegeServeur.dao.DAONoter;
+import org.collegeServeur.entities.Matiere;
 import org.collegeServeur.entities.Noter;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
@@ -44,6 +45,8 @@ public class ServiceNoter  implements IServiceNoter {
 		// TODO Auto-generated method stub
 		return dao.getMoyenneParMatiere(idMatiere);
 	}
+
+
 	
 	
 }

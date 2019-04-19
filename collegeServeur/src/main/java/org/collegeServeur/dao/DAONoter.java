@@ -63,5 +63,21 @@ public class DAONoter implements IDAONoter {
 		// return moyenne;
 	}
 
+	
+//	public String admissionEtud() {
+//		
+//		Query q = sessionFactory.getCurrentSession().createQuery("select avg(note) from Noter n where n.etudiant.idPersonne =:id group by n.etudiant.idPersonne");
+//	
+//		
+//		if() {
+//			
+//			
+//		}
+//		
+//		return "Vous êtes admis";
+//		
+//	}
+	
+
 
 }
