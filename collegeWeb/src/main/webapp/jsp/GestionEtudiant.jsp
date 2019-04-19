@@ -38,7 +38,7 @@
 
 
 <form:form modelAttribute="etudiant" action="/collegeWeb/admin/addEtudiant">
-
+<form:input path="idPersonne" type="hidden" />
 
 <form:input path="nom" type="text" style="width: 600px"  class="form-control form-control-lg" placeholder="nom"></form:input>
  <br>

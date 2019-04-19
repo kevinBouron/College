@@ -39,6 +39,7 @@
 
 
 <form:form modelAttribute="college" action="/collegeWeb/admin/addCollege">
+<form:input path="idCollege" type="hidden" />
 Nom du College: <form:input path="nom" type="text"/> <br>
 Site internet: <form:input path="siteInternet" type="text"/> <br>
 

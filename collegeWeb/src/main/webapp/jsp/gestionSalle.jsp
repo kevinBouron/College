@@ -38,7 +38,7 @@
 
 
 <form:form modelAttribute="salle" action="/collegeWeb/admin/addSalles">
-
+<form:input path="idSalle" type="hidden" />
  nom: <form:input path="nom" type="text"/> <br>
 <%-- Matières: <form:select path="Matiere.idMatiere" items="${matieres}" --%>
 <%-- itemValue="idMatiere" itemLabel="nom"></form:select> --%>
