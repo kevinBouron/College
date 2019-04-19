@@ -35,6 +35,7 @@
 </nav>
 
 <form:form modelAttribute="matiere" action="/collegeWeb/admin/addMatiere">
+<form:input path="idMatiere" type="hidden" />
 
 nom: <form:input path="nom" type="text"/> <br>
 

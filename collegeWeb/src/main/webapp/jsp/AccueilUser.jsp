@@ -38,18 +38,17 @@ crossorigin='anonymous'>
   </ul>
 </nav>
 
-<table>
 
 
+<table width="50%" align="center">
+<tr>
+<td><button style='font-size:24px' ><a href="/collegeWeb/user/GestionNote" > Gestion des notes</a> <i class='far fa-building'></i></button></td>
+	
 
-<button style='font-size:24px' ><a href="/collegeWeb/user/GestionNote" > Gestion des notes</a> <i class='far fa-building'></i></button><br>
+<td><button style='font-size:24px'><a href="/collegWeb/admin/GestionMatiere">  Gestion Matière </a><i class='far fa-folder-open'></i></button></td>
 
-<button style='font-size:24px'><a href="/collegWeb/admin/GestionMatiere">  Gestion Matière </a><i class='far fa-folder-open'></i></button><br>
-
-<button style='font-size:24px'><a href="collegeWeb/admin/GestionEtudiant" > Gestion étudiants</a> <i class='fas fa-graduation-cap'></i></button><br>
-
-
-<br>
+<td><button style='font-size:24px'><a href="collegeWeb/admin/GestionEtudiant" > Gestion étudiants</a> <i class='fas fa-graduation-cap'></i></button><td>
+</tr>
 
 </table>
 
