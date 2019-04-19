@@ -23,14 +23,11 @@ public class Salle {
 	@OneToMany(mappedBy="salle",cascade=CascadeType.ALL)
 	List<Matiere> matieres;
 
+
 	
 	
-	
-	
-	
-	
-	public Salle(int nbrPlace, List<Matiere> matieres) {
-	
+	public Salle(String nom, int nbrPlace, List<Matiere> matieres) {
+		this.nom=nom;
 		this.nbrPlace = nbrPlace;
 		this.matieres = matieres;
 	}

@@ -33,7 +33,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#">										</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey">Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -44,20 +44,22 @@ crossorigin='anonymous'>
 <form:form modelAttribute="matiere" action="/collegeWeb/admin/addMatiere">
 <form:input path="idMatiere" type="hidden" />
 
-nom: <form:input path="nom" type="text"/> <br>
+nom: <form:input path="nom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="nom"/> <br>
 
 <%-- Matière: <form:select path="Matiere.idMatiere" items="${matieres}" itemValue="idMatiere" itemLabel="nom"></form:select> <br> --%>
-Salle: <form:select path="salle.idSalle" items="${salles}" itemValue="idSalle" itemLabel="Salle"></form:select> <br>
+Salle: <form:select path="salle.idSalle" items="${salles}" style="width: 570px" itemValue="idSalle" itemLabel="nom"></form:select> <br>
 <%-- Enseignant : <form:select path="Enseignant.idPersonne" items="${enseignants}" itemValue="idPersonne" itemLabel="Enseignant"></form:select> --%>
+<br>
 
 <button type="submit" class="btn"> Valider </button>
 
+<br>
+<br>
 
 
 
 
-
- <table class="table" style="width: 600px">
+ <table class="table" style="width: 100%">
  <thead>
          <tr>
            <th width="60" align="center">Nom de la matière </th>
@@ -72,9 +74,9 @@ Salle: <form:select path="salle.idSalle" items="${salles}" itemValue="idSalle" i
          <c:forEach items="${matieres}" var="s">
          <tr>
          
-           <td width="60" align="center">${s.nom}</td>
+           <td width="60">${s.nom}</td>
 
-           <td width="60" align="center">${s.salle}</td>
+           <td width="60" >${s.salle}</td>
            
       
            

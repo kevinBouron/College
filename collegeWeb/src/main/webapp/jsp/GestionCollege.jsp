@@ -15,7 +15,6 @@ crossorigin='anonymous'>
 <meta name='viewport' content='width=device-width, initial-scale=1'>
 <link rel='stylesheet' href='https://use.fontawesome.com/releases/v5.7.0/css/all.css' integrity='sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ' 
 crossorigin='anonymous'>
-
 <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
 <title>Accueil Admin</title>
 </head>
@@ -29,13 +28,11 @@ crossorigin='anonymous'>
     <a class="navbar-brand" ><h1>Accueil Administrateur</h1></a>
     <ul class="navbar-nav mr-auto mt-2 mt-lg-0">
       <li class="nav-item active">
-        <a class="nav-link" href="/collegeWeb/admin/home"><h2 style="color:grey"><i class="fas fa-home"></i>Accueil</h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="/collegeWeb/admin/home"><h2 style="color:grey"><i class="fas fa-home"></i>Accueil</h2><span class="sr-only">(current)</span> </a>
       </li>
-      <li class="nav-item">
-        <a class="nav-link" href="#">										</a>
-      </li>
+      
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey">Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -45,19 +42,18 @@ crossorigin='anonymous'>
 
 
 
-<table>
+<table align="center" style="width:100%; margin-left:350px">
+<tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionDepartement"/>Gestion des départements</a> <i class='fas fa-shapes'></i></button></td></tr>
+
+<tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionEnseignant"/>Gestion des enseignants</a> <i class='fas fa-chalkboard-teacher'></i></button></td></tr>
+
+<tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionEtudiant" > Gestion des étudiants</a> <i class='fas fa-graduation-cap'></i></button></td></tr>
+
+<tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionSalles" > Gestion des salles</a> <i class='far fa-building'></i></button></td></tr>
+
+<tr><td><button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionMatiere"> Gestion des matières</a> <i class='far fa-folder-open'></i></button></td></tr>
 
 
-
-<button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionSalles" > Gestion salles</a> <i class='far fa-building'></i></button><br>
-
-<button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionMatiere"> Gestion matières</a> <i class='far fa-folder-open'></i></button><br>
-
-<button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionEtudiant" > Gestion étudiants</a> <i class='fas fa-graduation-cap'></i></button><br>
-
-<button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionEnseignant"/>Gestion enseignants</a> <i class='fas fa-chalkboard-teacher'></i></button><br>
-
-<button style='font-size:24px; width:50%'><a href="/collegeWeb/admin/GestionDepartement"/>Gestion départements</a> <i class='fas fa-shapes'></i></button><br>
 
 
 

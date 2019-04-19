@@ -34,7 +34,7 @@ crossorigin='anonymous'>
         <a class="nav-link" href="#">										</a>
       </li>
       <li class="nav-item" >
-        <a class="nav-link" href="#"><h2 style="color:grey">Se déconnecter </h2> <span class="sr-only">(current)</span></a>
+        <a class="nav-link" href="#"><h2 style="color:grey"><i class="fas fa-sign-out-alt"></i>Se déconnecter </h2> <span class="sr-only">(current)</span></a>
       </li>
     </ul>
    
@@ -49,34 +49,34 @@ crossorigin='anonymous'>
 
 <form:input path="idPersonne" type="hidden" />
 
- nom:<form:input path="nom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="nom"></form:input>
+ Nom:<form:input path="nom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="nom"></form:input>
  <br>
   <br>
-  prénom :<form:input path="prenom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="prenom"></form:input>
+  Prénom :<form:input path="prenom" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="prenom"></form:input>
   <br>
    <br>
-  mail:<form:input path="mail" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="mail"></form:input>
+  Mail:<form:input path="mail" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="mail"></form:input>
   <br>
    <br>
-  	numero de telephone: <form:input path="tel" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="tel"></form:input>
+  Numero de telephone: <form:input path="tel" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="tel"></form:input>
   <br>
    <br>
-   date de Prise de Fonction (format :AAAA/MM/JJ):<form:input path="datePriseFonction" style="width: 600px" type="text" class="form-control form-control-lg" placeholder="Date de prise de fonction (AAAA/MM/JJ) "></form:input>
+Prise de Fonction :<form:input path="datePriseFonction" style="width: 600px" type="text" class="form-control form-control-lg" placeholder="Date de prise de fonction (AAAA/MM/JJ) "></form:input>
     <br>
    <br>
-    indice : <form:input path="indice" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="indice"></form:input>
+    Indice : <form:input path="indice" type="text" style="width: 600px" class="form-control form-control-lg" placeholder="indice"></form:input>
  <br>
  
  
  
  
- Département: <form:select path="departement.idDepartement" style="width: 500px" items="${departements}"
+ Département: <form:select path="departement.idDepartement" style="width: 535px" items="${departements}"
 itemValue="idDepartement" itemLabel="nomDepartement">
 <option>Département</option>
 </form:select>
  <br>
  <br>
-Matière: <form:select path="matiere.idMatiere" style="width: 500px" items="${matieres}"
+Matière: <form:select path="matiere.idMatiere" style="width: 560px" items="${matieres}"
 itemValue="idMatiere" itemLabel="nom"></form:select>
 <br>
 
@@ -84,37 +84,38 @@ itemValue="idMatiere" itemLabel="nom"></form:select>
 
 <form:button type="submit" value="valider" >valider</form:button>
  
- 
- <table class="table" style="width: 600px">
+ <br>
+ <br>
+ <table class="table" style="width: 100%">
  <thead>
          <tr>
-           <th width="60" align="center">Nom Enseignant </th>
-           <th width="60" align="center">Prenom Enseignant</th>
-            <th width="60" align="center">Mail </th>
-           <th width="60" align="center">Tel</th>
-           <th width="60" align="center">Date de prise en fonction</th>
-            <th width="60" align="center">indice</th>
+           <th width="60">Nom  </th>
+           <th width="60" >Prénom </th>
+            <th width="60" >Mail </th>
+           <th width="60" >Téléphone</th>
+           <th width="60" >Date de prise de fonction</th>
+            <th width="60" >Indice</th>
            
-           <th width="60" align="center">Edit/Delete</th>
+           <th width="60" >Modifier /Supprimer</th>
          </tr>
        </thead>
          <tbody>
          <c:forEach items="${enseignants}" var="p">
          <tr>
          
-           <td width="60" align="center">${p.nom}</td>
+           <td width="60" >${p.nom}</td>
 
-           <td width="60" align="center">${p.prenom}</td>
+           <td width="60" >${p.prenom}</td>
            
-            <td width="60" align="center">${p.mail}</td>
+            <td width="60">${p.mail}</td>
 
-           <td width="60" align="center">${p.tel}</td>
+           <td width="60" >${p.tel}</td>
            
-           <td width="60" align="center">${p.datePriseFonction}</td>
+           <td width="60" >${p.datePriseFonction}</td>
            
-           <td width="60" align="center">${p.indice}</td>
+           <td width="60" >${p.indice}</td>
            
-           <td width="60" align="left"><a href="editEns?id=${p.idPersonne}"><i class="fas fa-pen"></i>   </a><a href="suppEns?id=${p.idPersonne}"><i class="far fa-trash-alt"></i></a></td>
+           <td width="60" align="left"><a href="editEns?id=${p.idPersonne}"><i class="fas fa-pen"></i>   </a><a href="suppEns?id=${p.idPersonne}"></a></td>
 
           
 
