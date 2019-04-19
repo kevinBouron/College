@@ -27,30 +27,41 @@ public class App
 //        ServiceEtudiant serviceE= new ServiceEtudiant();
 //        Etudiant etu = new Etudiant("kevin", "bouron", "@", 06, 2019);
 //        serviceE.create(etu);
-    	
+//    	
 //    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
 //    	IServiceCollege serviceC=(IServiceCollege) ctx.getBean("serviceCollege");
 //
 //    	College c = new College("@", null);
 //    	serviceC.create(c);
-    	
-  
 //    	
+//  
+//    	
+<<<<<<< HEAD
    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
 
 
+=======
+//    	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
+//
+//
+>>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
 //      	IServiceNoter serviceN = (IServiceNoter) ctx.getBean("serviceNoter");
 //      	IServiceMatiere serviceM = (IServiceMatiere) ctx.getBean("serviceMatiere");
+<<<<<<< HEAD
     	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
 ////    	Etudiant etu = new Etudiant("Bloup","Bobby", null, 0, 0);
+=======
+//    	IServiceEtudiant serviceE= (IServiceEtudiant) ctx.getBean("serviceEtudiant");
+//    	Etudiant etu = new Etudiant("Bloup","Bobby", null, 0, 0);
+>>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
 //    	Noter note= new Noter();
 //    	Matiere matiere = new Matiere();
 //    	
-////    	serviceE.create(etu);
-////    	
-////    	matiere.setNom("physique");
-////    	
-////    	serviceM.create(matiere);
+//    	serviceE.create(etu);
+//    	
+//    	matiere.setNom("physique");
+//    	
+//    	serviceM.create(matiere);
 //    	
 //    	Etudiant etu = serviceE.GetById(1);
 //    	note.setNote(15);
@@ -63,7 +74,53 @@ public class App
 //    	
 //    	
 //    	serviceN.create(note);
+<<<<<<< HEAD
     	
     System.out.println(serviceE.getMatieresSansNote(1));
+=======
+//    	
+//    	ServiceEtudiant serviceE= new ServiceEtudiant();
+//      Etudiant etu = new Etudiant("kevin", "bouron", "@", 06, 2019);
+//      serviceE.create(etu);
+//  	
+//  	
+//  	IServiceCollege serviceC=(IServiceCollege) ctx.getBean("serviceCollege");
+//
+//  	College c = new College("@", null);
+//  	serviceC.create(c);
+//  	
+//  	ApplicationContext ctx=new ClassPathXmlApplicationContext("config.xml");
+//  	IServiceEtudiant serviceE = (IServiceEtudiant) ctx.getBean("serviceEtudiant");
+//  	
+//  	Etudiant etud1 = new Etudiant("Inglebert", "Simon", "@", 01, 2010);
+//  	
+//  	serviceE.create(etud1);
+//  	
+//  	IServiceMatiere serviceM=(IServiceMatiere) ctx.getBean("serviceMatiere");
+// 	
+//  	Matiere mat = new Matiere("Chimie");
+//  	Matiere mat2 = new Matiere("Physique");
+//  	
+//  	serviceM.create(mat);
+//  	serviceM.create(mat2);
+//  	
+//  	
+//  	IServiceNoter serviceC=(IServiceNoter) ctx.getBean("serviceNoter");
+//  	
+//  	Noter not1 = new Noter(11f, mat, etud1);
+//  	Noter not2 = new Noter(12f, mat, etud1);
+//  	Noter not3 = new Noter(13f, mat, etud1);
+//  	Noter not4 = new Noter(14f, mat, etud1);
+//  	
+//  	serviceC.create(not1);
+//  	serviceC.create(not2);
+//  	serviceC.create(not3);
+//  	serviceC.create(not4);
+//  	
+//  	IServiceDepartement serviceD = (IServiceDepartement) ctx.getBean("serviceDepartement");
+//  	
+//  	//System.out.println(serviceC.getMoyenneParMatiere(1));
+//  	System.out.println(serviceD.getMoyenneParDepartement(1));    	
+>>>>>>> branch 'master' of https://github.com/kevinBouron/College.git
     }
 }
